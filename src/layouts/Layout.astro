@@ -1,0 +1,25 @@
+---
+interface Props {
+  title: string;
+}
+const { title } = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title} — Mes Souvenirs</title>
+    <style is:global>
+      @import "../styles/global.css";
+    </style>
+  </head>
+  <body class="bg-zinc-950 text-zinc-100 min-h-screen">
+    <nav class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-8 py-5 bg-zinc-950/90 backdrop-blur-sm border-b border-zinc-800">
+      <a href="/" class="font-light tracking-widest text-amber-400">Mes Souvenirs</a>
+    </nav>
+    <main class="pt-28">
+      <slot />
+    </main>
+  </body>
+</html>

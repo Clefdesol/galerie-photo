@@ -1,0 +1,123 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { readdir, readFile } from 'fs/promises';
+import path from 'path';
+
+export async function getStaticPaths() {
+  const evenementsDir = path.join(process.cwd(), 'src/content/evenements');
+  const fichiers = await readdir(evenementsDir);
+  return fichiers
+    .filter(f => f.endsWith('.json'))
+    .map(f => ({ params: { slug: f.replace('.json', '') } }));
+}
+
+const { slug } = Astro.params;
+const fichier = path.join(process.cwd(), 'src/content/evenements', `${slug}.json`);
+const contenu = await readFile(fichier, 'utf-8');
+const ev = JSON.parse(contenu);
+---
+<Layout title={ev.titre}>
+  <div class="max-w-6xl mx-auto px-8 py-16">
+
+    <a href="/" class="text-xs text-zinc-500 tracking-widest uppercase hover:text-amber-400 transition-colors mb-8 inline-block">
+      ← Tous les événements
+    </a>
+    <p class="text-xs text-amber-400 tracking-widest uppercase mb-3">
+      {new Date(ev.date).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' })}
+    </p>
+    <h1 class="text-4xl font-light text-zinc-100 mb-10">{ev.titre}</h1>
+
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-1" id="galerie">
+      {ev.photos.map((photo, i) => (
+        <div
+          class="relative aspect-square bg-zinc-800 overflow-hidden cursor-pointer group"
+          data-index={i}
+          data-titre={photo.titre}
+          data-tags={photo.tags.join(', ')}
+          data-src={`/evenements/${slug}/${photo.fichier}`}
+        >
+          <img
+            src={`/evenements/${slug}/${photo.fichier}`}
+            alt={photo.titre}
+            class="w-full h-full object-cover"
+          />
+          <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-3">
+            <span class="text-white text-xs">{photo.titre}</span>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+
+  <div id="lightbox" class="fixed inset-0 z-50 bg-black/95 hidden items-center justify-center">
+    <button id="lb-close" class="absolute top-6 right-8 text-zinc-400 hover:text-white text-xs tracking-widest uppercase">✕ Fermer</button>
+    <button id="lb-prev" class="absolute left-6 top-1/2 -translate-y-1/2 border border-zinc-700 hover:border-amber-400 text-zinc-400 hover:text-amber-400 w-10 h-10 flex items-center justify-center transition-colors">←</button>
+    <button id="lb-next" class="absolute right-6 top-1/2 -translate-y-1/2 border border-zinc-700 hover:border-amber-400 text-zinc-400 hover:text-amber-400 w-10 h-10 flex items-center justify-center transition-colors">→</button>
+    <div class="text-center">
+      <img id="lb-photo" src="" alt="" class="object-contain mx-auto mb-4" style="max-height: 75vh; max-width: 90vw;" />
+      <p class="text-zinc-300 text-sm mt-2" id="lb-titre"></p>
+      <div id="lb-tags" class="flex gap-2 justify-center flex-wrap mt-2"></div>
+      <p class="text-zinc-500 text-xs mt-4" id="lb-counter"></p>
+    </div>
+  </div>
+</Layout>
+
+<script>
+  const items = document.querySelectorAll('#galerie [data-index]');
+  const lightbox = document.getElementById('lightbox');
+  const lbTitre = document.getElementById('lb-titre');
+  const lbTags = document.getElementById('lb-tags');
+  const lbCounter = document.getElementById('lb-counter');
+  let current = 0;
+  const total = items.length;
+
+  function open(index) {
+    current = index;
+    update();
+    lightbox.classList.remove('hidden');
+    lightbox.classList.add('flex');
+  }
+
+  function close() {
+    lightbox.classList.add('hidden');
+    lightbox.classList.remove('flex');
+  }
+
+  function update() {
+    const item = items[current];
+    const lbPhoto = document.getElementById('lb-photo');
+    lbPhoto.src = item.dataset.src;
+    lbPhoto.alt = item.dataset.titre;
+    lbTitre.textContent = item.dataset.titre;
+    lbCounter.textContent = `${current + 1} / ${total}`;
+    lbTags.innerHTML = item.dataset.tags
+      .split(', ')
+      .map(t => `<span class="text-amber-400 border border-amber-400/30 text-xs px-2 py-1">${t}</span>`)
+      .join('');
+  }
+
+  items.forEach(item => {
+    item.addEventListener('click', () => open(parseInt(item.dataset.index)));
+  });
+
+  document.getElementById('lb-close').addEventListener('click', close);
+  document.getElementById('lb-prev').addEventListener('click', () => {
+    current = (current - 1 + total) % total;
+    update();
+  });
+  document.getElementById('lb-next').addEventListener('click', () => {
+    current = (current + 1) % total;
+    update();
+  });
+
+  document.addEventListener('keydown', e => {
+    if (!lightbox.classList.contains('flex')) return;
+    if (e.key === 'Escape') close();
+    if (e.key === 'ArrowRight') { current = (current + 1) % total; update(); }
+    if (e.key === 'ArrowLeft') { current = (current - 1 + total) % total; update(); }
+  });
+
+  lightbox.addEventListener('click', e => {
+    if (e.target === lightbox) close();
+  });
+</script>
