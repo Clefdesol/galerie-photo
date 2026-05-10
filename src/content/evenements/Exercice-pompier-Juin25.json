@@ -1,0 +1,393 @@
+{
+  "titre": "Exercice Pompier Juin25",
+  "date": "2025-06-20",
+  "description": "",
+  "couverture": "1-_DSC1430.jpg",
+  "photos": [
+    {
+      "fichier": "1-_DSC1430.jpg",
+      "titre": "1-_DSC1430",
+      "tags": [
+        "Canton Genève et environs",
+        "Carouge",
+        "Lieu:",
+        "pompier"
+      ],
+      "date": "2025-06-20T06:56:54.000Z"
+    },
+    {
+      "fichier": "10-_DSC1525.jpg",
+      "titre": "10-_DSC1525",
+      "tags": [
+        "Canton Genève et environs",
+        "Carouge",
+        "Lieu:",
+        "pompier"
+      ],
+      "date": "2025-06-20T07:38:03.000Z"
+    },
+    {
+      "fichier": "11-_DSC1533.jpg",
+      "titre": "11-_DSC1533",
+      "tags": [
+        "Canton Genève et environs",
+        "Carouge",
+        "Lieu:",
+        "pompier"
+      ],
+      "date": "2025-06-20T07:39:19.000Z"
+    },
+    {
+      "fichier": "12-_DSC1565.jpg",
+      "titre": "12-_DSC1565",
+      "tags": [
+        "Canton Genève et environs",
+        "Carouge",
+        "Lieu:",
+        "pompier"
+      ],
+      "date": "2025-06-20T07:42:15.000Z"
+    },
+    {
+      "fichier": "13-_DSC1527.jpg",
+      "titre": "13-_DSC1527",
+      "tags": [
+        "Canton Genève et environs",
+        "Carouge",
+        "Lieu:",
+        "pompier"
+      ],
+      "date": "2025-06-20T07:38:29.000Z"
+    },
+    {
+      "fichier": "14-_DSC1545.jpg",
+      "titre": "14-_DSC1545",
+      "tags": [
+        "Canton Genève et environs",
+        "Carouge",
+        "Lieu:",
+        "pompier"
+      ],
+      "date": "2025-06-20T07:40:19.000Z"
+    },
+    {
+      "fichier": "15-_DSC1584.jpg",
+      "titre": "15-_DSC1584",
+      "tags": [
+        "Canton Genève et environs",
+        "Carouge",
+        "Lieu:",
+        "pompier"
+      ],
+      "date": "2025-06-20T07:43:51.000Z"
+    },
+    {
+      "fichier": "16-_DSC1550.jpg",
+      "titre": "16-_DSC1550",
+      "tags": [
+        "Canton Genève et environs",
+        "Carouge",
+        "Lieu:",
+        "pompier"
+      ],
+      "date": "2025-06-20T07:40:36.000Z"
+    },
+    {
+      "fichier": "17-_DSC1568.jpg",
+      "titre": "17-_DSC1568",
+      "tags": [
+        "Canton Genève et environs",
+        "Carouge",
+        "Lieu:",
+        "pompier"
+      ],
+      "date": "2025-06-20T07:42:21.000Z"
+    },
+    {
+      "fichier": "18-_DSC1586.jpg",
+      "titre": "18-_DSC1586",
+      "tags": [
+        "Canton Genève et environs",
+        "Carouge",
+        "Lieu:",
+        "pompier"
+      ],
+      "date": "2025-06-20T07:44:34.000Z"
+    },
+    {
+      "fichier": "19-_DSC1629.jpg",
+      "titre": "19-_DSC1629",
+      "tags": [
+        "Canton Genève et environs",
+        "Carouge",
+        "Lieu:",
+        "pompier"
+      ],
+      "date": "2025-06-20T07:55:02.000Z"
+    },
+    {
+      "fichier": "2-_DSC1464.jpg",
+      "titre": "2-_DSC1464",
+      "tags": [
+        "Canton Genève et environs",
+        "Carouge",
+        "Lieu:",
+        "pompier"
+      ],
+      "date": "2025-06-20T07:17:10.000Z"
+    },
+    {
+      "fichier": "20-_DSC1636.jpg",
+      "titre": "20-_DSC1636",
+      "tags": [
+        "Canton Genève et environs",
+        "Carouge",
+        "Lieu:",
+        "pompier"
+      ],
+      "date": "2025-06-20T07:56:08.000Z"
+    },
+    {
+      "fichier": "21-_DSC1646.jpg",
+      "titre": "21-_DSC1646",
+      "tags": [
+        "Canton Genève et environs",
+        "Carouge",
+        "Lieu:",
+        "pompier"
+      ],
+      "date": "2025-06-20T07:57:06.000Z"
+    },
+    {
+      "fichier": "22-_DSC1660.jpg",
+      "titre": "22-_DSC1660",
+      "tags": [
+        "Canton Genève et environs",
+        "Carouge",
+        "Lieu:",
+        "pompier"
+      ],
+      "date": "2025-06-20T07:59:08.000Z"
+    },
+    {
+      "fichier": "23-_DSC1677.jpg",
+      "titre": "23-_DSC1677",
+      "tags": [
+        "Canton Genève et environs",
+        "Carouge",
+        "Lieu:",
+        "pompier"
+      ],
+      "date": "2025-06-20T08:01:11.000Z"
+    },
+    {
+      "fichier": "24-_DSC1869.jpg",
+      "titre": "24-_DSC1869",
+      "tags": [
+        "Canton Genève et environs",
+        "Carouge",
+        "Lieu:",
+        "pompier"
+      ],
+      "date": "2025-06-20T08:43:06.000Z"
+    },
+    {
+      "fichier": "25-_DSC1896.jpg",
+      "titre": "25-_DSC1896",
+      "tags": [
+        "Canton Genève et environs",
+        "Carouge",
+        "Lieu:",
+        "pompier"
+      ],
+      "date": "2025-06-20T08:45:41.000Z"
+    },
+    {
+      "fichier": "26-_DSC1726.jpg",
+      "titre": "26-_DSC1726",
+      "tags": [
+        "Canton Genève et environs",
+        "Carouge",
+        "Lieu:",
+        "pompier"
+      ],
+      "date": "2025-06-20T08:20:09.000Z"
+    },
+    {
+      "fichier": "27-_DSC1730.jpg",
+      "titre": "27-_DSC1730",
+      "tags": [
+        "Canton Genève et environs",
+        "Carouge",
+        "Lieu:",
+        "pompier"
+      ],
+      "date": "2025-06-20T08:20:25.000Z"
+    },
+    {
+      "fichier": "28-_DSC1766.jpg",
+      "titre": "28-_DSC1766",
+      "tags": [
+        "Canton Genève et environs",
+        "Carouge",
+        "Lieu:",
+        "pompier"
+      ],
+      "date": "2025-06-20T08:27:14.000Z"
+    },
+    {
+      "fichier": "29-_DSC1790.jpg",
+      "titre": "29-_DSC1790",
+      "tags": [
+        "Canton Genève et environs",
+        "Carouge",
+        "Lieu:",
+        "pompier"
+      ],
+      "date": "2025-06-20T08:31:00.000Z"
+    },
+    {
+      "fichier": "3-_DSC1496.jpg",
+      "titre": "3-_DSC1496",
+      "tags": [
+        "Canton Genève et environs",
+        "Carouge",
+        "Lieu:",
+        "pompier"
+      ],
+      "date": "2025-06-20T07:35:02.000Z"
+    },
+    {
+      "fichier": "30-_DSC1795.jpg",
+      "titre": "30-_DSC1795",
+      "tags": [
+        "Canton Genève et environs",
+        "Carouge",
+        "Lieu:",
+        "pompier"
+      ],
+      "date": "2025-06-20T08:31:35.000Z"
+    },
+    {
+      "fichier": "31-_DSC1813.jpg",
+      "titre": "31-_DSC1813",
+      "tags": [
+        "Canton Genève et environs",
+        "Carouge",
+        "Lieu:",
+        "pompier"
+      ],
+      "date": "2025-06-20T08:33:08.000Z"
+    },
+    {
+      "fichier": "32-_DSC1900.jpg",
+      "titre": "32-_DSC1900",
+      "tags": [
+        "Canton Genève et environs",
+        "Carouge",
+        "Lieu:",
+        "pompier"
+      ],
+      "date": "2025-06-20T08:46:59.000Z"
+    },
+    {
+      "fichier": "33-_DSC1618.jpg",
+      "titre": "33-_DSC1618",
+      "tags": [
+        "Canton Genève et environs",
+        "Carouge",
+        "Lieu:",
+        "pompier"
+      ],
+      "date": "2025-06-20T07:50:49.000Z"
+    },
+    {
+      "fichier": "34-_DSC1595.jpg",
+      "titre": "34-_DSC1595",
+      "tags": [
+        "Canton Genève et environs",
+        "Carouge",
+        "Lieu:",
+        "pompier"
+      ],
+      "date": "2025-06-20T07:49:03.000Z"
+    },
+    {
+      "fichier": "35-_DSC1906.jpg",
+      "titre": "35-_DSC1906",
+      "tags": [
+        "Canton Genève et environs",
+        "Carouge",
+        "Lieu:",
+        "pompier"
+      ],
+      "date": "2025-06-20T08:51:29.000Z"
+    },
+    {
+      "fichier": "4-_DSC1580.jpg",
+      "titre": "4-_DSC1580",
+      "tags": [
+        "Canton Genève et environs",
+        "Carouge",
+        "Lieu:",
+        "pompier"
+      ],
+      "date": "2025-06-20T07:43:21.000Z"
+    },
+    {
+      "fichier": "5-_DSC1501.jpg",
+      "titre": "5-_DSC1501",
+      "tags": [
+        "Canton Genève et environs",
+        "Carouge",
+        "Lieu:",
+        "pompier"
+      ],
+      "date": "2025-06-20T07:35:41.000Z"
+    },
+    {
+      "fichier": "6-_DSC1503.jpg",
+      "titre": "6-_DSC1503",
+      "tags": [
+        "Canton Genève et environs",
+        "Carouge",
+        "Lieu:",
+        "pompier"
+      ],
+      "date": "2025-06-20T07:35:53.000Z"
+    },
+    {
+      "fichier": "7-_DSC1509.jpg",
+      "titre": "7-_DSC1509",
+      "tags": [
+        "Canton Genève et environs",
+        "Carouge",
+        "Lieu:",
+        "pompier"
+      ],
+      "date": "2025-06-20T07:36:32.000Z"
+    },
+    {
+      "fichier": "8-_DSC1487.jpg",
+      "titre": "8-_DSC1487",
+      "tags": [
+        "Canton Genève et environs",
+        "Carouge",
+        "Lieu:",
+        "pompier"
+      ],
+      "date": "2025-06-20T07:33:17.000Z"
+    },
+    {
+      "fichier": "9-_DSC1512.jpg",
+      "titre": "9-_DSC1512",
+      "tags": [
+        "Canton Genève et environs",
+        "Carouge",
+        "Lieu:",
+        "pompier"
+      ],
+      "date": "2025-06-20T07:37:05.000Z"
+    }
+  ]
+}
