@@ -1,4 +1,4 @@
-import { readdir, writeFile, mkdir } from 'fs/promises';
+import { readdir, readFile, writeFile, mkdir } from 'fs/promises';
 import path from 'path';
 import exifr from 'exifr';
 
@@ -67,11 +67,27 @@ for (const dossier of dossiers) {
   // Génère le JSON de l'événement
   const premierDate = photosData.find(p => p.date)?.date || new Date().toISOString();
   
+  // Lire le JSON existant pour préserver la description et les vidéos
+  let descriptionExistante = '';
+  let videosExistantes = [];
+  let couvertureExistante = '';
+  try {
+    const jsonExistant = await readFile(path.join(process.cwd(), CONTENT_DIR, `${dossier}.json`), 'utf-8');
+    const dataExistante = JSON.parse(jsonExistant);
+    descriptionExistante = dataExistante.description || '';
+videosExistantes = dataExistante.videos || [];
+couvertureExistante = dataExistante.couverture || '';
+ } catch (err) {
+    console.log(`  ⚠️  Pas de JSON existant ou erreur : ${err.message}`);
+  }
+
   const evenement = {
     titre: dossier.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase()),
     date: premierDate.split('T')[0],
-    description: '',
-    couverture: photosData[0].fichier,
+    "_aide_description": "Pour un saut de ligne, utilisez \\n entre les phrases",
+    description: descriptionExistante,
+    couverture: couvertureExistante || photosData[0]?.fichier || '',
+    videos: videosExistantes,
     photos: photosData,
   };
 

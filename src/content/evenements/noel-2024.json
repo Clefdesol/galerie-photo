@@ -1,8 +1,10 @@
 {
   "titre": "Noel 2024",
   "date": "2026-05-01",
-  "description": "",
+  "_aide_description": "Pour un saut de ligne, utilisez \\n entre les phrases",
+  "description": "C'est un fichier d'essai\n A jeter",
   "couverture": "1-IMG_0700.jpg",
+  "videos": [],
   "photos": [
     {
       "fichier": "1-IMG_0700.jpg",

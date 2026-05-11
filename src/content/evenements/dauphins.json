@@ -1,0 +1,14 @@
+{
+  "titre": "Dauphins",
+  "date": "2025-10-21",
+  "description": "Une rencontre magique avec des dauphins en pleine mer.",
+  "couverture": "",
+  "videos": [
+    {
+      "titre": "Dauphins en vidéo",
+      "youtubeId": "FjUm0H16e9U",
+      "type": "short"
+    }
+  ],
+  "photos": []
+}
