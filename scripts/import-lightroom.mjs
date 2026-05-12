@@ -23,11 +23,29 @@ async function lireJsonExistant(jsonPath) {
   }
 }
 
+async function trouverPremierePhoto(contentPath, sousEvenements) {
+  for (const sous of sousEvenements) {
+    try {
+      const sousJson = await readFile(path.join(contentPath, sous, '_index.json'), 'utf-8');
+      const sousData = JSON.parse(sousJson);
+      if (sousData.couverture && !sousData.couverture.includes('__FIRST__')) {
+        return `${sous}/${sousData.couverture}`;
+      }
+      if (sousData.sousEvenements?.length > 0) {
+        const found = await trouverPremierePhoto(path.join(contentPath, sous), sousData.sousEvenements);
+        if (found) return `${sous}/${found}`;
+      }
+    } catch {
+      continue;
+    }
+  }
+  return '';
+}
+
 async function traiterDossier(dossierPath, contentPath, niveau = 0) {
   const indent = '  '.repeat(niveau);
   const entries = (await readdir(dossierPath)).filter(d => !d.startsWith('.'));
 
-  // Séparer photos et sous-dossiers
   const photos = [];
   const sousDossiers = [];
 
@@ -41,7 +59,6 @@ async function traiterDossier(dossierPath, contentPath, niveau = 0) {
     }
   }
 
-  // Trier les photos numériquement
   photos.sort((a, b) => {
     const numA = parseInt(a.match(/^(\d+)/)?.[1] || 0);
     const numB = parseInt(b.match(/^(\d+)/)?.[1] || 0);
@@ -51,7 +68,6 @@ async function traiterDossier(dossierPath, contentPath, niveau = 0) {
   const nomDossier = path.basename(dossierPath);
   console.log(`${indent}📁 ${nomDossier} (${photos.length} photos, ${sousDossiers.length} sous-dossiers)`);
 
-  // Traiter les photos du dossier courant
   const photosData = [];
   for (const photo of photos) {
     const photoPath = path.join(dossierPath, photo);
@@ -64,12 +80,7 @@ async function traiterDossier(dossierPath, contentPath, niveau = 0) {
       }
       const titre = exif?.ObjectName || exif?.Title || photo.replace(/\.[^/.]+$/, '');
       const date = exif?.DateTimeOriginal || exif?.CreateDate || null;
-      photosData.push({
-        fichier: photo,
-        titre,
-        tags,
-        date: date ? date.toISOString() : null,
-      });
+      photosData.push({ fichier: photo, titre, tags, date: date ? date.toISOString() : null });
       console.log(`${indent}  ✅ ${photo} — tags: [${tags.join(', ')}]`);
     } catch {
       console.log(`${indent}  ⚠️  ${photo} — pas de métadonnées`);
@@ -77,7 +88,6 @@ async function traiterDossier(dossierPath, contentPath, niveau = 0) {
     }
   }
 
-  // Traiter récursivement les sous-dossiers
   const sousEvenements = [];
   for (const sousDossier of sousDossiers) {
     const sousDossierPath = path.join(dossierPath, sousDossier);
@@ -86,15 +96,19 @@ async function traiterDossier(dossierPath, contentPath, niveau = 0) {
     sousEvenements.push(sousDossier);
   }
 
-  // Déterminer le type
   const type = photos.length === 0 && sousDossiers.length > 0 ? 'categorie' : 'evenement';
 
-  // Lire JSON existant pour préserver description, couverture, vidéos
   await mkdir(contentPath, { recursive: true });
   const jsonPath = path.join(contentPath, '_index.json');
   const existant = await lireJsonExistant(jsonPath);
 
   const premierDate = photosData.find(p => p.date)?.date || new Date().toISOString();
+
+  // Couverture : préserver l'existante, sinon première photo, sinon chercher dans sous-dossiers
+  let couverture = existant?.couverture || '';
+  if (!couverture || couverture.includes('__FIRST__')) {
+    couverture = photosData[0]?.fichier || await trouverPremierePhoto(contentPath, sousEvenements);
+  }
 
   const data = {
     titre: existant?.titre || nomDossier.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase()),
@@ -102,7 +116,7 @@ async function traiterDossier(dossierPath, contentPath, niveau = 0) {
     date: existant?.date || premierDate.split('T')[0],
     "_aide_description": "Pour un saut de ligne, utilisez \\n entre les phrases",
     description: existant?.description || '',
-    couverture: existant?.couverture || photosData[0]?.fichier || '',
+    couverture,
     videos: existant?.videos || [],
     sousEvenements,
     photos: photosData,
@@ -112,14 +126,12 @@ async function traiterDossier(dossierPath, contentPath, niveau = 0) {
   console.log(`${indent}  💾 _index.json généré !`);
 }
 
-// Point d'entrée
 const dossiers = (await readdir(EVENEMENTS_DIR)).filter(d => !d.startsWith('.'));
 
 for (const dossier of dossiers) {
   const dossierPath = path.join(EVENEMENTS_DIR, dossier);
   const s = await stat(dossierPath);
   if (!s.isDirectory()) continue;
-  
   const contentPath = path.join(CONTENT_DIR, dossier);
   await traiterDossier(dossierPath, contentPath);
 }
