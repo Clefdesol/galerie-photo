@@ -1,0 +1,14 @@
+{
+  "titre": "Postulation",
+  "date": "2026-05-11",
+  "description": "La partie vidéo pour les pompiers.",
+  "couverture": "",
+  "videos": [
+    {
+      "titre": "Je me présente",
+      "youtubeId": "r0ZAgai0J2Y",
+      "type": "short"
+    }
+  ],
+  "photos": []
+}

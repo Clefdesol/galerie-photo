@@ -20,7 +20,13 @@ function fixEncoding(str) {
 for (const dossier of dossiers) {
   const dossierPath = path.join(EVENEMENTS_DIR, dossier);
   const fichiers = await readdir(dossierPath);
-  const photos = fichiers.filter(f => f.match(/\.(jpg|jpeg)$/i));
+  const photos = fichiers
+  .filter(f => f.match(/\.(jpg|jpeg)$/i))
+  .sort((a, b) => {
+    const numA = parseInt(a.match(/^(\d+)/)?.[1] || 0);
+    const numB = parseInt(b.match(/^(\d+)/)?.[1] || 0);
+    return numA - numB;
+  });
 
   if (photos.length === 0) continue;
 
