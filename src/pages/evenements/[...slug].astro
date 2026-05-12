@@ -1,0 +1,275 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { readdir, readFile, stat } from 'fs/promises';
+import path from 'path';
+
+export async function getStaticPaths() {
+  const CONTENT_DIR = path.join(process.cwd(), 'src/content/evenements');
+  const chemins = [];
+
+  async function parcourir(dir, slugParts = []) {
+    const entries = (await readdir(dir)).filter(d => !d.startsWith('.'));
+    for (const entry of entries) {
+      const fullPath = path.join(dir, entry);
+      const s = await stat(fullPath);
+      if (!s.isDirectory()) continue;
+      const newSlugParts = [...slugParts, entry];
+      chemins.push({ params: { slug: newSlugParts.join('/') } });
+      await parcourir(fullPath, newSlugParts);
+    }
+  }
+
+  await parcourir(CONTENT_DIR);
+  return chemins;
+}
+
+const CONTENT_DIR = path.join(process.cwd(), 'src/content/evenements');
+const PUBLIC_DIR = path.join(process.cwd(), 'public/evenements');
+
+const { slug } = Astro.params;
+const slugParts = slug.split('/');
+
+const jsonPath = path.join(CONTENT_DIR, ...slugParts, '_index.json');
+const contenu = await readFile(jsonPath, 'utf-8');
+const ev = JSON.parse(contenu);
+
+const tousLesTags = [...new Set(ev.photos?.flatMap(p => p.tags) || [])].filter(Boolean).sort();
+const parentSlug = slugParts.length > 1 ? slugParts.slice(0, -1).join('/') : null;
+---
+<Layout title={ev.titre}>
+  <div class="max-w-6xl mx-auto px-8 py-12">
+
+    <!-- En-tête -->
+    <div class="mb-12 border-b border-zinc-800 pb-10">
+      <a href={parentSlug ? `/evenements/${parentSlug}` : '/'} 
+         class="text-xs text-zinc-500 tracking-widest uppercase hover:text-amber-400 transition-colors mb-6 inline-block">
+        ← {parentSlug ? 'Retour' : 'Tous les événements'}
+      </a>
+
+      <!-- Fil d'Ariane -->
+      {slugParts.length > 1 && (
+        <div class="flex gap-2 text-xs text-zinc-600 mb-4 flex-wrap">
+          <a href="/" class="hover:text-amber-400">Accueil</a>
+          {slugParts.map((part, i) => (
+            <>
+              <span>›</span>
+              {i < slugParts.length - 1 ? (
+                <a href={`/evenements/${slugParts.slice(0, i+1).join('/')}`} class="hover:text-amber-400">
+                  {part.replace(/-/g, ' ')}
+                </a>
+              ) : (
+                <span class="text-zinc-400">{part.replace(/-/g, ' ')}</span>
+              )}
+            </>
+          ))}
+        </div>
+      )}
+
+      <p class="text-xs text-amber-400 tracking-widest uppercase mb-3">
+        {new Date(ev.date).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' })}
+      </p>
+      <h1 class="text-5xl font-light text-zinc-100 mb-4">{ev.titre}</h1>
+      {ev.description && (
+        <p class="text-zinc-400 font-light mt-4 text-lg leading-relaxed" set:html={ev.description.replace(/\n/g, '<br/>')}></p>
+      )}
+    </div>
+
+    <!-- Sous-événements -->
+    {ev.sousEvenements && ev.sousEvenements.length > 0 && (
+      <div class="mb-12">
+        <p class="text-xs text-amber-400 tracking-widest uppercase mb-6">Sous-événements</p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {ev.sousEvenements.map(async (sousSlug) => {
+            const sousJsonPath = path.join(CONTENT_DIR, ...slugParts, sousSlug, '_index.json');
+            const sousContenu = await readFile(sousJsonPath, 'utf-8');
+            const sousEv = JSON.parse(sousContenu);
+            const fullSlug = `${slug}/${sousSlug}`;
+            return (
+              <a href={`/evenements/${fullSlug}`} class="group block">
+                <div class="overflow-hidden mb-3" style="aspect-ratio:1/1; background:#18181b;">
+                  {sousEv.couverture ? (
+                    <img
+                      src={`/evenements/${fullSlug}/${sousEv.couverture}`}
+                      alt={sousEv.titre}
+                      style="width:100%;height:100%;object-fit:contain;display:block;"
+                    />
+                  ) : (
+                    <div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;">
+                      <span style="color:#71717a;font-size:0.75rem;">📁</span>
+                    </div>
+                  )}
+                </div>
+                <h3 class="text-zinc-100 font-light group-hover:text-amber-400 transition-colors">
+                  {sousEv.titre}
+                </h3>
+                <p class="text-zinc-600 text-sm mt-1">
+                  {sousEv.photos?.length || 0} photo{sousEv.photos?.length > 1 ? 's' : ''}
+                </p>
+              </a>
+            );
+          })}
+        </div>
+      </div>
+    )}
+
+    <!-- Vidéos -->
+    {ev.videos && ev.videos.length > 0 && (
+      <div class="mb-12">
+        <p class="text-xs text-amber-400 tracking-widest uppercase mb-6">Vidéos</p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {ev.videos.map(video => (
+            <div>
+              <div style={video.type === 'short' ? 'position:relative;padding-bottom:177%;height:0;overflow:hidden;max-width:320px;' : 'position:relative;padding-bottom:56.25%;height:0;overflow:hidden;'}>
+                <iframe
+                  src={`https://www.youtube.com/embed/${video.youtubeId}`}
+                  title={video.titre}
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                  style="position:absolute;top:0;left:0;width:100%;height:100%;"
+                />
+              </div>
+              <p class="text-zinc-400 text-sm mt-2 font-light">{video.titre}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    )}
+
+    <!-- Tags filtrables -->
+    {tousLesTags.length > 0 && (
+      <div class="flex flex-wrap gap-2 mb-8" id="tag-filters">
+        <button class="tag-btn text-xs tracking-widest uppercase px-3 py-1 border transition-colors duration-200"
+          data-tag="tous"
+          style="border-color:#c09050;color:#c09050;background:rgba(192,144,80,0.1);">
+          Tous
+        </button>
+        {tousLesTags.map(tag => (
+          <button class="tag-btn text-xs tracking-widest uppercase px-3 py-1 border border-zinc-700 text-zinc-500 hover:border-amber-400 hover:text-amber-400 transition-colors duration-200"
+            data-tag={tag}>
+            {tag}
+          </button>
+        ))}
+      </div>
+    )}
+
+    <!-- Grille photos -->
+    {ev.photos && ev.photos.length > 0 && (
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2" id="galerie">
+        {ev.photos.map((photo, i) => (
+          <div class="galerie-item relative bg-zinc-900 overflow-hidden cursor-pointer group"
+            style="aspect-ratio:1/1;"
+            data-index={i}
+            data-titre={photo.titre}
+            data-tags={photo.tags.join(',')}
+            data-src={`/evenements/${slug}/${photo.fichier}`}
+          >
+            <img
+              src={`/evenements/${slug}/${photo.fichier}`}
+              alt={photo.titre}
+              style="width:100%;height:100%;object-fit:contain;display:block;background:#18181b;"
+            />
+            <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-3">
+              <span class="text-white text-xs font-light">{photo.titre}</span>
+            </div>
+          </div>
+        ))}
+      </div>
+    )}
+
+  </div>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="fixed inset-0 z-50 bg-black/97 hidden items-center justify-center">
+    <button id="lb-close" class="absolute top-6 right-8 text-zinc-400 hover:text-white text-xs tracking-widest uppercase">✕ Fermer</button>
+    <p class="absolute top-7 left-8 text-zinc-600 text-xs" id="lb-counter"></p>
+    <button id="lb-prev" class="absolute left-6 top-1/2 -translate-y-1/2 border border-zinc-700 hover:border-amber-400 text-zinc-400 hover:text-amber-400 w-10 h-10 flex items-center justify-center transition-colors">←</button>
+    <button id="lb-next" class="absolute right-6 top-1/2 -translate-y-1/2 border border-zinc-700 hover:border-amber-400 text-zinc-400 hover:text-amber-400 w-10 h-10 flex items-center justify-center transition-colors">→</button>
+    <div class="text-center px-16">
+      <img id="lb-photo" src="" alt="" style="max-height:78vh;max-width:88vw;object-fit:contain;display:block;margin:0 auto;" />
+      <div class="mt-4">
+        <p class="text-zinc-300 text-sm font-light" id="lb-titre"></p>
+        <div id="lb-tags" class="flex gap-2 justify-center flex-wrap mt-2"></div>
+      </div>
+    </div>
+  </div>
+</Layout>
+
+<script>
+  const items = document.querySelectorAll('.galerie-item');
+  const lightbox = document.getElementById('lightbox');
+  const lbTitre = document.getElementById('lb-titre');
+  const lbTags = document.getElementById('lb-tags');
+  const lbCounter = document.getElementById('lb-counter');
+  let current = 0;
+  let visibleItems = [...items];
+
+  function open(index) {
+    current = index;
+    update();
+    lightbox.classList.remove('hidden');
+    lightbox.classList.add('flex');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function close() {
+    lightbox.classList.add('hidden');
+    lightbox.classList.remove('flex');
+    document.body.style.overflow = '';
+  }
+
+  function update() {
+    const item = visibleItems[current];
+    const lbPhoto = document.getElementById('lb-photo');
+    lbPhoto.src = item.dataset.src;
+    lbPhoto.alt = item.dataset.titre;
+    lbTitre.textContent = item.dataset.titre;
+    lbCounter.textContent = `${current + 1} / ${visibleItems.length}`;
+    const tags = item.dataset.tags ? item.dataset.tags.split(',').filter(Boolean) : [];
+    lbTags.innerHTML = tags.map(t => `<span class="text-amber-400 border border-amber-400/30 text-xs px-2 py-1">${t.trim()}</span>`).join('');
+  }
+
+  items.forEach(item => {
+    item.addEventListener('click', () => {
+      const idx = visibleItems.indexOf(item);
+      if (idx !== -1) open(idx);
+    });
+  });
+
+  document.getElementById('lb-close')?.addEventListener('click', close);
+  document.getElementById('lb-prev')?.addEventListener('click', () => {
+    current = (current - 1 + visibleItems.length) % visibleItems.length;
+    update();
+  });
+  document.getElementById('lb-next')?.addEventListener('click', () => {
+    current = (current + 1) % visibleItems.length;
+    update();
+  });
+
+  document.addEventListener('keydown', e => {
+    if (!lightbox?.classList.contains('flex')) return;
+    if (e.key === 'Escape') close();
+    if (e.key === 'ArrowRight') { current = (current + 1) % visibleItems.length; update(); }
+    if (e.key === 'ArrowLeft') { current = (current - 1 + visibleItems.length) % visibleItems.length; update(); }
+  });
+
+  lightbox?.addEventListener('click', e => {
+    if (e.target === lightbox) close();
+  });
+
+  const tagBtns = document.querySelectorAll('.tag-btn');
+  tagBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      tagBtns.forEach(b => { b.style.borderColor='#3f3f46'; b.style.color='#71717a'; b.style.background='transparent'; });
+      btn.style.borderColor='#c09050'; btn.style.color='#c09050'; btn.style.background='rgba(192,144,80,0.1)';
+      const tag = btn.dataset.tag;
+      visibleItems = [];
+      items.forEach(item => {
+        const tags = item.dataset.tags ? item.dataset.tags.split(',') : [];
+        const visible = tag === 'tous' || tags.map(t => t.trim()).includes(tag);
+        item.style.display = visible ? 'block' : 'none';
+        if (visible) visibleItems.push(item);
+      });
+    });
+  });
+</script>

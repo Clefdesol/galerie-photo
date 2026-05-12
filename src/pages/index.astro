@@ -1,94 +1,107 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { readdir, readFile } from 'fs/promises';
+import { readdir, readFile, stat } from 'fs/promises';
 import path from 'path';
 
-const evenementsDir = path.join(process.cwd(), 'src/content/evenements');
-const fichiers = await readdir(evenementsDir);
+const CONTENT_DIR = path.join(process.cwd(), 'src/content/evenements');
 
-const evenements = await Promise.all(
-  fichiers
-    .filter(f => f.endsWith('.json'))
-    .map(async f => {
-      const contenu = await readFile(path.join(evenementsDir, f), 'utf-8');
+async function lireEvenements(dir) {
+  const entries = (await readdir(dir)).filter(d => !d.startsWith('.'));
+  const evenements = [];
+
+  for (const entry of entries) {
+    const fullPath = path.join(dir, entry);
+    const s = await stat(fullPath);
+    if (!s.isDirectory()) continue;
+
+    const jsonPath = path.join(fullPath, '_index.json');
+    try {
+      const contenu = await readFile(jsonPath, 'utf-8');
       const data = JSON.parse(contenu);
-      const slug = f.replace('.json', '');
-      return { ...data, slug };
-    })
-);
+      const slugRelatif = fullPath.replace(CONTENT_DIR + '/', '');
+      evenements.push({ ...data, slug: slugRelatif });
+    } catch {
+      continue;
+    }
+  }
 
-evenements.sort((a, b) => new Date(b.date) - new Date(a.date));
+  return evenements.sort((a, b) => new Date(b.date) - new Date(a.date));
+}
+
+const evenements = await lireEvenements(CONTENT_DIR);
 ---
 
 <Layout title="Accueil">
   <div class="max-w-6xl mx-auto px-8 py-12">
 
     <!-- Titre -->
-    <div class="mb-16 border-b border-zinc-800 pb-10">
+    <div class="mb-10 border-b border-zinc-800 pb-10">
       <p class="text-xs text-amber-400 tracking-widest uppercase mb-3">Collection privée</p>
       <h1 class="text-5xl font-light text-zinc-100 tracking-tight">Mes Souvenirs</h1>
       <p class="text-zinc-500 mt-4 font-light">{evenements.length} événement{evenements.length > 1 ? 's' : ''}</p>
     </div>
 
     <!-- Barre de recherche -->
-<div class="mb-10">
-  <input
-    id="recherche"
-    type="text"
-    placeholder="Rechercher un événement, un mot-clé..."
-    style="width:100%; padding: 12px 16px; background: #18181b; border: 1px solid #3f3f46; color: #e4e4e7; font-size: 0.9rem; letter-spacing: 0.05em; outline: none;"
-    autocomplete="off"
-  />
-  <p id="recherche-info" class="text-zinc-600 text-xs mt-2 tracking-wide"></p>
-</div>
+    <div class="mb-10">
+      <input
+        id="recherche"
+        type="text"
+        placeholder="Rechercher un événement, un mot-clé..."
+        style="width:100%; padding: 12px 16px; background: #18181b; border: 1px solid #3f3f46; color: #e4e4e7; font-size: 0.9rem; letter-spacing: 0.05em; outline: none;"
+        autocomplete="off"
+      />
+      <p id="recherche-info" class="text-zinc-600 text-xs mt-2 tracking-wide"></p>
+    </div>
 
     <!-- Grille événements -->
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
       {evenements.map(ev => (
         <a href={`/evenements/${ev.slug}`} class="group block evenement-card"
-        data-titre={ev.titre}
-  data-tags={ev.photos ? ev.photos.flatMap(p => p.tags).join(' ') : ''}
-  data-description={ev.description || ''}
->
-
-          <!-- Photo carrée -->
-
-<div class="overflow-hidden mb-4 relative" style="aspect-ratio: 1/1; background: #18181b;">
-  {ev.couverture ? (
-    <img
-      src={`/evenements/${ev.slug}/${ev.couverture}`}
-      alt={ev.titre}
-      style="width: 100%; height: 100%; object-fit: contain; display: block;"
-    />
-  ) : ev.videos && ev.videos.length > 0 ? (
-    <img
-      src={`https://img.youtube.com/vi/${ev.videos[0].youtubeId}/hqdefault.jpg`}
-      alt={ev.titre}
-      style="width: 100%; height: 100%; object-fit: cover; display: block;"
-    />
-  ) : (
-    <div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;">
-      <span style="color:#71717a;font-size:0.75rem;letter-spacing:0.1em;">AUCUN MÉDIA</span>
-    </div>
-  )}
-</div>
-
-          <!-- Infos -->
+          data-titre={ev.titre}
+          data-tags={ev.photos ? ev.photos.flatMap(p => p.tags).join(' ') : ''}
+          data-description={ev.description || ''}
+        >
+          <div class="overflow-hidden mb-4 relative" style="aspect-ratio: 1/1; background: #18181b;">
+            {ev.couverture ? (
+              <img
+                src={`/evenements/${ev.slug}/${ev.couverture}`}
+                alt={ev.titre}
+                style="width: 100%; height: 100%; object-fit: contain; display: block;"
+              />
+            ) : ev.videos && ev.videos.length > 0 ? (
+              <img
+                src={`https://img.youtube.com/vi/${ev.videos[0].youtubeId}/hqdefault.jpg`}
+                alt={ev.titre}
+                style="width: 100%; height: 100%; object-fit: cover; display: block;"
+              />
+            ) : (
+              <div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;">
+                <span style="color:#71717a;font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;">
+                  {ev.type === 'categorie' ? '📁 ' + ev.sousEvenements?.length + ' événements' : 'Aucun média'}
+                </span>
+              </div>
+            )}
+          </div>
           <p class="text-xs text-amber-400 tracking-widest uppercase mb-1">
             {new Date(ev.date).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' })}
           </p>
           <h2 class="text-lg font-light text-zinc-100 group-hover:text-amber-400 transition-colors duration-200">
             {ev.titre}
           </h2>
-          <p class="text-sm text-zinc-600 mt-1">{ev.photos.length} photo{ev.photos.length > 1 ? 's' : ''}</p>
-
+          <p class="text-sm text-zinc-600 mt-1">
+            {ev.type === 'categorie'
+              ? `${ev.sousEvenements?.length} sous-événement${ev.sousEvenements?.length > 1 ? 's' : ''}`
+              : `${ev.photos?.length || 0} photo${ev.photos?.length > 1 ? 's' : ''}`
+            }
+          </p>
         </a>
       ))}
     </div>
 
   </div>
+</Layout>
 
-  <script>
+<script>
   const input = document.getElementById('recherche');
   const info = document.getElementById('recherche-info');
   const cards = document.querySelectorAll('.evenement-card');
@@ -96,7 +109,6 @@ evenements.sort((a, b) => new Date(b.date) - new Date(a.date));
   input.addEventListener('input', () => {
     const q = input.value.toLowerCase().trim();
     let visible = 0;
-
     cards.forEach(card => {
       const titre = card.dataset.titre.toLowerCase();
       const tags = card.dataset.tags.toLowerCase();
@@ -105,8 +117,6 @@ evenements.sort((a, b) => new Date(b.date) - new Date(a.date));
       card.style.display = match ? 'block' : 'none';
       if (match) visible++;
     });
-
     info.textContent = q ? `${visible} résultat${visible > 1 ? 's' : ''} pour "${input.value}"` : '';
   });
 </script>
-</Layout>

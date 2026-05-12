@@ -1,0 +1,36 @@
+{
+  "titre": "Jour 2",
+  "type": "evenement",
+  "date": "2026-04-04",
+  "_aide_description": "Pour un saut de ligne, utilisez \\n entre les phrases",
+  "description": "",
+  "couverture": "IMG_9784.jpeg",
+  "videos": [],
+  "sousEvenements": [],
+  "photos": [
+    {
+      "fichier": "IMG_9784.jpeg",
+      "titre": "IMG_9784",
+      "tags": [],
+      "date": "2026-04-04T08:22:13.000Z"
+    },
+    {
+      "fichier": "IMG_9788.jpeg",
+      "titre": "IMG_9788",
+      "tags": [],
+      "date": "2026-04-04T09:48:42.000Z"
+    },
+    {
+      "fichier": "IMG_9812.jpeg",
+      "titre": "IMG_9812",
+      "tags": [],
+      "date": "2026-04-04T11:39:53.000Z"
+    },
+    {
+      "fichier": "IMG_9816.jpeg",
+      "titre": "IMG_9816",
+      "tags": [],
+      "date": "2026-04-04T15:06:50.000Z"
+    }
+  ]
+}
