@@ -1,8 +1,12 @@
 import { readdir, readFile, writeFile, mkdir, stat } from 'fs/promises';
 import path from 'path';
 import exifr from 'exifr';
+import sharp from 'sharp';
 
-const EVENEMENTS_DIR = './public/evenements';
+
+
+const EVENEMENTS_DIR = './sources/evenements';
+const OPTIMISED_DIR = './public/evenements';
 const CONTENT_DIR = './src/content/evenements';
 
 function fixEncoding(str) {
@@ -54,7 +58,7 @@ async function traiterDossier(dossierPath, contentPath, niveau = 0) {
     const s = await stat(fullPath);
     if (s.isDirectory()) {
       sousDossiers.push(entry);
-    } else if (entry.match(/\.(jpg|jpeg)$/i)) {
+       } else if (entry.match(/\.(jpg|jpeg)$/i) && !entry.includes('-opt.')) {
       photos.push(entry);
     }
   }
@@ -80,8 +84,21 @@ async function traiterDossier(dossierPath, contentPath, niveau = 0) {
       }
       const titre = exif?.ObjectName || exif?.Title || photo.replace(/\.[^/.]+$/, '');
       const date = exif?.DateTimeOriginal || exif?.CreateDate || null;
-      photosData.push({ fichier: photo, titre, tags, date: date ? date.toISOString() : null });
-      console.log(`${indent}  ✅ ${photo} — tags: [${tags.join(', ')}]`);
+
+      // Optimisation de la photo
+const photoOptDir = path.join(OPTIMISED_DIR, path.relative(EVENEMENTS_DIR, dossierPath));
+await mkdir(photoOptDir, { recursive: true });
+const photoOptPath = path.join(photoOptDir, photo.replace(/\.(jpg|jpeg)$/i, '-opt.jpg'));
+if (!await stat(photoOptPath).catch(() => null)) {
+  await sharp(photoPath)
+    .resize(2000, 2000, { fit: 'inside', withoutEnlargement: true })
+    .jpeg({ quality: 80, progressive: true })
+    .toFile(photoOptPath);
+}
+
+
+const photoOpt = photo.replace(/\.(jpg|jpeg)$/i, '-opt.jpg');
+photosData.push({ fichier: photoOpt, titre, tags, date: date ? date.toISOString() : null });      console.log(`${indent}  ✅ ${photo} — tags: [${tags.join(', ')}]`);
     } catch {
       console.log(`${indent}  ⚠️  ${photo} — pas de métadonnées`);
       photosData.push({ fichier: photo, titre: photo, tags: [], date: null });
@@ -105,11 +122,18 @@ async function traiterDossier(dossierPath, contentPath, niveau = 0) {
   const premierDate = photosData.find(p => p.date)?.date || new Date().toISOString();
 
   // Couverture : préserver l'existante, sinon première photo, sinon chercher dans sous-dossiers
-  let couverture = existant?.couverture || '';
+  /* let couverture = existant?.couverture || '';
   if (!couverture || couverture.includes('__FIRST__')) {
     couverture = photosData[0]?.fichier || await trouverPremierePhoto(contentPath, sousEvenements);
-  }
-
+  } */
+let couverture = existant?.couverture || '';
+// Mettre à jour la couverture vers -opt si nécessaire
+if (couverture && !couverture.includes('-opt.') && !couverture.includes('__FIRST__')) {
+  couverture = couverture.replace(/\.(jpg|jpeg)$/i, '-opt.$1');
+}
+if (!couverture || couverture.includes('__FIRST__')) {
+  couverture = photosData[0]?.fichier || await trouverPremierePhoto(contentPath, sousEvenements);
+}
   const data = {
     titre: existant?.titre || nomDossier.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase()),
     type,
