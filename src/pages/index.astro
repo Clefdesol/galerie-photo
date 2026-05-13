@@ -53,8 +53,11 @@ const evenements = await lireEvenements(CONTENT_DIR);
       <p id="recherche-info" class="text-zinc-600 text-xs mt-2 tracking-wide"></p>
     </div>
 
+    <!-- Résultats de recherche -->
+    <div id="resultats" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-8" style="display:none;"></div>
+
     <!-- Grille événements -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div id="grille-evenements" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
       {evenements.map(ev => (
         <a href={`/evenements/${ev.slug}`} class="group block evenement-card"
           data-titre={ev.titre}
@@ -104,19 +107,45 @@ const evenements = await lireEvenements(CONTENT_DIR);
 <script>
   const input = document.getElementById('recherche');
   const info = document.getElementById('recherche-info');
-  const cards = document.querySelectorAll('.evenement-card');
+  const grille = document.getElementById('grille-evenements');
+  const resultats = document.getElementById('resultats');
 
-  input.addEventListener('input', () => {
+  input.addEventListener('input', async () => {
     const q = input.value.toLowerCase().trim();
-    let visible = 0;
-    cards.forEach(card => {
-      const titre = card.dataset.titre.toLowerCase();
-      const tags = card.dataset.tags.toLowerCase();
-      const description = card.dataset.description.toLowerCase();
-      const match = !q || titre.includes(q) || tags.includes(q) || description.includes(q);
-      card.style.display = match ? 'block' : 'none';
-      if (match) visible++;
-    });
-    info.textContent = q ? `${visible} résultat${visible > 1 ? 's' : ''} pour "${input.value}"` : '';
+
+    if (!q) {
+      grille.style.display = 'grid';
+      resultats.style.display = 'none';
+      resultats.innerHTML = '';
+      info.textContent = '';
+      return;
+    }
+
+    // Recherche dans tous les niveaux via search.json
+    const response = await fetch('/search.json');
+    const tous = await response.json();
+
+    const trouvés = tous.filter(ev =>
+    
+      ev.titre.toLowerCase().includes(q) ||
+      (ev.tags || []).join(' ').toLowerCase().includes(q) ||
+      (ev.description || '').toLowerCase().includes(q)
+    );
+
+    grille.style.display = 'none';
+    resultats.style.display = trouvés.length ? 'grid' : 'none';
+
+    resultats.innerHTML = trouvés.map(ev => `
+      <a href="/evenements/${ev.slug}" class="group block">
+        <div style="aspect-ratio:1/1;background:#18181b;margin-bottom:1rem;display:flex;align-items:center;justify-content:center;">
+          <span style="color:#71717a;font-size:0.75rem;">${ev.titre}</span>
+        </div>
+        <p style="font-size:0.75rem;color:#c09050;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.25rem;">${ev.date}</p>
+        <h2 style="font-size:1.125rem;font-weight:300;color:#e4e4e7;">${ev.titre}</h2>
+        <p style="font-size:0.875rem;color:#52525b;margin-top:0.25rem;">${ev.nbPhotos} photo${ev.nbPhotos > 1 ? 's' : ''}</p>
+      </a>
+    `).join('');
+
+    info.textContent = `${trouvés.length} résultat${trouvés.length > 1 ? 's' : ''} pour "${input.value}"`;
   });
 </script>
