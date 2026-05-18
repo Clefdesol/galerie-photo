@@ -53,6 +53,17 @@ const evenements = await lireEvenements(CONTENT_DIR);
       <p id="recherche-info" class="text-zinc-600 text-xs mt-2 tracking-wide"></p>
     </div>
 
+    <!-- Filtres par catégorie -->
+    <div class="mb-8 flex flex-wrap gap-2">
+      {['Tous', 'admin', 'famille-proche', 'famille-eloignee', 'jargeva', 'cabasson', 'public'].map(cat => (
+        <button
+          class="filtre-cat"
+          data-cat={cat}
+          style={`padding: 6px 16px; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; border: 1px solid ${cat === 'Tous' ? '#f59e0b' : '#3f3f46'}; background: ${cat === 'Tous' ? '#f59e0b' : 'transparent'}; color: ${cat === 'Tous' ? '#18181b' : '#71717a'}; cursor: pointer; transition: all 0.15s;`}
+        >{cat}</button>
+      ))}
+    </div>
+
     <!-- Résultats de recherche -->
     <div id="resultats" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-8" style="display:none;"></div>
 
@@ -63,6 +74,7 @@ const evenements = await lireEvenements(CONTENT_DIR);
           data-titre={ev.titre}
           data-tags={ev.photos ? ev.photos.flatMap(p => p.tags).join(' ') : ''}
           data-description={ev.description || ''}
+          data-categories={(ev.categories || ['admin']).join(' ')}
         >
           <div class="overflow-hidden mb-4 relative" style="aspect-ratio: 1/1; background: #18181b;">
             {ev.couverture ? (
@@ -109,6 +121,32 @@ const evenements = await lireEvenements(CONTENT_DIR);
   const info = document.getElementById('recherche-info');
   const grille = document.getElementById('grille-evenements');
   const resultats = document.getElementById('resultats');
+
+  // Filtres catégorie
+  let categorieActive = 'Tous';
+  const boutonsFiltres = document.querySelectorAll('.filtre-cat');
+
+  function appliquerFiltre() {
+    const cards = grille.querySelectorAll('.evenement-card');
+    cards.forEach(card => {
+      const cats = card.dataset.categories ? card.dataset.categories.split(' ') : ['admin'];
+      const visible = categorieActive === 'Tous' || cats.includes(categorieActive);
+      card.style.display = visible ? 'block' : 'none';
+    });
+  }
+
+  boutonsFiltres.forEach(btn => {
+    btn.addEventListener('click', () => {
+      categorieActive = btn.dataset.cat;
+      boutonsFiltres.forEach(b => {
+        const actif = b.dataset.cat === categorieActive;
+        b.style.background = actif ? '#f59e0b' : 'transparent';
+        b.style.color = actif ? '#18181b' : '#71717a';
+        b.style.borderColor = actif ? '#f59e0b' : '#3f3f46';
+      });
+      appliquerFiltre();
+    });
+  });
 
   input.addEventListener('input', async () => {
     const q = input.value.toLowerCase().trim();

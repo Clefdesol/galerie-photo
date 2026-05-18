@@ -1,0 +1,124 @@
+{
+  "titre": "Nice Avril 25",
+  "type": "evenement",
+  "date": "2025-04-12",
+  "_aide_description": "Pour un saut de ligne, utilisez \\n entre les phrases",
+  "description": "",
+  "couverture": "1-IMG_0220-opt.jpg",
+  "_aide_categories": "Valeurs possibles : admin, famille-proche, famille-eloignee, jargeva, cabasson, public",
+  "categories": [
+    "admin"
+  ],
+  "videos": [],
+  "sousEvenements": [],
+  "photos": [
+    {
+      "fichier": "1-IMG_0220-opt.jpg",
+      "titre": "1-IMG_0220",
+      "tags": [
+        "Mattia",
+        "Nice"
+      ],
+      "date": "2025-04-12T09:55:56.000Z"
+    },
+    {
+      "fichier": "2-IMG_0263-opt.jpg",
+      "titre": "2-IMG_0263",
+      "tags": [
+        "Mattia",
+        "Nice"
+      ],
+      "date": "2025-04-12T11:43:31.000Z"
+    },
+    {
+      "fichier": "3-IMG_0237-opt.jpg",
+      "titre": "3-IMG_0237",
+      "tags": [
+        "Mattia",
+        "Nice"
+      ],
+      "date": "2025-04-12T11:19:44.000Z"
+    },
+    {
+      "fichier": "4-IMG_0241-opt.jpg",
+      "titre": "4-IMG_0241",
+      "tags": [
+        "Mattia",
+        "Nice"
+      ],
+      "date": "2025-04-12T11:19:48.000Z"
+    },
+    {
+      "fichier": "5-IMG_0250-opt.jpg",
+      "titre": "5-IMG_0250",
+      "tags": [
+        "Mattia",
+        "Nice"
+      ],
+      "date": "2025-04-12T11:34:41.000Z"
+    },
+    {
+      "fichier": "6-IMG_0258-opt.jpg",
+      "titre": "6-IMG_0258",
+      "tags": [
+        "Mattia",
+        "Nice"
+      ],
+      "date": "2025-04-12T11:42:12.000Z"
+    },
+    {
+      "fichier": "7-IMG_7647-opt.jpg",
+      "titre": "7-IMG_7647",
+      "tags": [
+        "Mattia",
+        "Nice"
+      ],
+      "date": "2025-04-12T12:01:58.000Z"
+    },
+    {
+      "fichier": "8-IMG_0292-opt.jpg",
+      "titre": "8-IMG_0292",
+      "tags": [
+        "Mattia",
+        "Nice"
+      ],
+      "date": "2025-04-12T17:08:20.000Z"
+    },
+    {
+      "fichier": "9-IMG_0295-opt.jpg",
+      "titre": "9-IMG_0295",
+      "tags": [
+        "Mattia",
+        "Nice"
+      ],
+      "date": "2025-04-12T17:10:12.000Z"
+    },
+    {
+      "fichier": "10-IMG_0301-opt.jpg",
+      "titre": "10-IMG_0301",
+      "tags": [
+        "Mattia",
+        "Nice"
+      ],
+      "date": "2025-04-12T17:17:37.000Z"
+    },
+    {
+      "fichier": "11-IMG_0226-opt.jpg",
+      "titre": "11-IMG_0226",
+      "tags": [
+        "Mattia",
+        "Nice"
+      ],
+      "date": "2025-04-12T10:18:15.000Z"
+    },
+    {
+      "fichier": "12-IMG_0223-opt.jpg",
+      "titre": "12-IMG_0223",
+      "tags": [
+        "Mattia",
+        "Nice"
+      ],
+      "date": "2025-04-12T10:15:21.000Z"
+    }
+  ]
+}

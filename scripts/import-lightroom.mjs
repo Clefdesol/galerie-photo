@@ -141,6 +141,8 @@ if (!couverture || couverture.includes('__FIRST__')) {
     "_aide_description": "Pour un saut de ligne, utilisez \\n entre les phrases",
     description: existant?.description || '',
     couverture,
+    "_aide_categories": "Valeurs possibles : admin, famille-proche, famille-eloignee, jargeva, cabasson, public",
+    categories: existant?.categories || ['admin'],
     videos: existant?.videos || [],
     sousEvenements,
     photos: photosData,

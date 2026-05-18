@@ -5,6 +5,10 @@
   "_aide_description": "Pour un saut de ligne, utilisez \\n entre les phrases",
   "description": "",
   "couverture": "2-IMG_7628-opt.jpg",
+  "_aide_categories": "Valeurs possibles : admin, famille-proche, famille-eloignee, jargeva, cabasson, public",
+  "categories": [
+    "admin"
+  ],
   "videos": [],
   "sousEvenements": [],
   "photos": [
