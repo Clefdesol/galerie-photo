@@ -7,7 +7,8 @@
   "couverture": "1-_DSC1430-opt.jpg",
   "_aide_categories": "Valeurs possibles : admin, famille-proche, famille-eloignee, jargeva, cabasson, public",
   "categories": [
-    "admin"
+    "admin",
+    "public"
   ],
   "videos": [],
   "sousEvenements": [],

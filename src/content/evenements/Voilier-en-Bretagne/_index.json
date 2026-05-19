@@ -7,7 +7,8 @@
   "couverture": "1-IMG_4665-opt.jpg",
   "_aide_categories": "Valeurs possibles : admin, famille-proche, famille-eloignee, jargeva, cabasson, public",
   "categories": [
-    "admin"
+    "admin",
+    "famille-eloignee"
   ],
   "videos": [],
   "sousEvenements": [],

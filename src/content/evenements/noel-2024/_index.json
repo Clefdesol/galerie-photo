@@ -7,6 +7,7 @@
   "couverture": "1-IMG_0700-opt.jpg",
   "_aide_categories": "Valeurs possibles : admin, famille-proche, famille-eloignee, jargeva, cabasson, public",
   "categories": [
+    "cabasson",
     "admin"
   ],
   "videos": [],

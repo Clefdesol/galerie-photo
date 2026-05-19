@@ -33,7 +33,10 @@ const jsonPath = path.join(CONTENT_DIR, ...slugParts, '_index.json');
 const contenu = await readFile(jsonPath, 'utf-8');
 const ev = JSON.parse(contenu);
 
-const tousLesTags = [...new Set(ev.photos?.flatMap(p => p.tags) || [])].filter(Boolean).sort();
+const tousLesTags = [...new Set([
+  ...(ev.photos?.flatMap(p => p.tags) || []),
+  ...(ev.videos?.flatMap(v => v.tags || []) || []),
+])].filter(Boolean).sort();
 const parentSlug = slugParts.length > 1 ? slugParts.slice(0, -1).join('/') : null;
 ---
 <Layout title={ev.titre}>
@@ -118,7 +121,7 @@ const parentSlug = slugParts.length > 1 ? slugParts.slice(0, -1).join('/') : nul
         <p class="text-xs text-amber-400 tracking-widest uppercase mb-6">Vidéos</p>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {ev.videos.map(video => (
-            <div>
+            <div class="video-item" data-tags={(video.tags || []).join(',')}>
               <div style={video.type === 'short' ? 'position:relative;padding-bottom:177%;height:0;overflow:hidden;max-width:320px;' : 'position:relative;padding-bottom:56.25%;height:0;overflow:hidden;'}>
                 <iframe
                   src={`https://www.youtube.com/embed/${video.youtubeId}`}
@@ -130,6 +133,13 @@ const parentSlug = slugParts.length > 1 ? slugParts.slice(0, -1).join('/') : nul
                 />
               </div>
               <p class="text-zinc-400 text-sm mt-2 font-light">{video.titre}</p>
+              {video.tags && video.tags.length > 0 && (
+                <div class="flex flex-wrap gap-1 mt-2">
+                  {video.tags.map(tag => (
+                    <span class="text-amber-400 border border-amber-400/30 text-xs px-2 py-1">{tag}</span>
+                  ))}
+                </div>
+              )}
             </div>
           ))}
         </div>
@@ -258,6 +268,7 @@ const parentSlug = slugParts.length > 1 ? slugParts.slice(0, -1).join('/') : nul
   });
 
   const tagBtns = document.querySelectorAll('.tag-btn');
+  const videoItems = document.querySelectorAll('.video-item');
   tagBtns.forEach(btn => {
     btn.addEventListener('click', () => {
       tagBtns.forEach(b => { b.style.borderColor='#3f3f46'; b.style.color='#71717a'; b.style.background='transparent'; });
@@ -269,6 +280,11 @@ const parentSlug = slugParts.length > 1 ? slugParts.slice(0, -1).join('/') : nul
         const visible = tag === 'tous' || tags.map(t => t.trim()).includes(tag);
         item.style.display = visible ? 'block' : 'none';
         if (visible) visibleItems.push(item);
+      });
+      videoItems.forEach(item => {
+        const tags = item.dataset.tags ? item.dataset.tags.split(',') : [];
+        const visible = tag === 'tous' || tags.map(t => t.trim()).includes(tag);
+        item.style.display = visible ? 'block' : 'none';
       });
     });
   });
