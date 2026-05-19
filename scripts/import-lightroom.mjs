@@ -3,8 +3,6 @@ import path from 'path';
 import exifr from 'exifr';
 import sharp from 'sharp';
 
-
-
 const EVENEMENTS_DIR = './sources/evenements';
 const OPTIMISED_DIR = './public/evenements';
 const CONTENT_DIR = './src/content/evenements';
@@ -18,20 +16,19 @@ function fixEncoding(str) {
   }
 }
 
-async function lireJsonExistant(jsonPath) {
+async function lireJson(jsonPath) {
   try {
-    const contenu = await readFile(jsonPath, 'utf-8');
-    return JSON.parse(contenu);
+    return JSON.parse(await readFile(jsonPath, 'utf-8'));
   } catch {
     return null;
   }
 }
 
+// Cherche la couverture dans les sous-événements déjà générés (src/content)
 async function trouverPremierePhoto(contentPath, sousEvenements) {
   for (const sous of sousEvenements) {
     try {
-      const sousJson = await readFile(path.join(contentPath, sous, '_index.json'), 'utf-8');
-      const sousData = JSON.parse(sousJson);
+      const sousData = JSON.parse(await readFile(path.join(contentPath, sous, '_index.json'), 'utf-8'));
       if (sousData.couverture && !sousData.couverture.includes('__FIRST__')) {
         return `${sous}/${sousData.couverture}`;
       }
@@ -58,7 +55,7 @@ async function traiterDossier(dossierPath, contentPath, niveau = 0) {
     const s = await stat(fullPath);
     if (s.isDirectory()) {
       sousDossiers.push(entry);
-       } else if (entry.match(/\.(jpg|jpeg)$/i) && !entry.includes('-opt.')) {
+    } else if (entry.match(/\.(jpg|jpeg)$/i) && !entry.includes('-opt.')) {
       photos.push(entry);
     }
   }
@@ -71,6 +68,9 @@ async function traiterDossier(dossierPath, contentPath, niveau = 0) {
 
   const nomDossier = path.basename(dossierPath);
   console.log(`${indent}📁 ${nomDossier} (${photos.length} photos, ${sousDossiers.length} sous-dossiers)`);
+
+  // Lire les métadonnées depuis sources/ (source de vérité)
+  const sourceMeta = await lireJson(path.join(dossierPath, '_index.json'));
 
   const photosData = [];
   for (const photo of photos) {
@@ -85,20 +85,19 @@ async function traiterDossier(dossierPath, contentPath, niveau = 0) {
       const titre = exif?.ObjectName || exif?.Title || photo.replace(/\.[^/.]+$/, '');
       const date = exif?.DateTimeOriginal || exif?.CreateDate || null;
 
-      // Optimisation de la photo
-const photoOptDir = path.join(OPTIMISED_DIR, path.relative(EVENEMENTS_DIR, dossierPath));
-await mkdir(photoOptDir, { recursive: true });
-const photoOptPath = path.join(photoOptDir, photo.replace(/\.(jpg|jpeg)$/i, '-opt.jpg'));
-if (!await stat(photoOptPath).catch(() => null)) {
-  await sharp(photoPath)
-    .resize(2000, 2000, { fit: 'inside', withoutEnlargement: true })
-    .jpeg({ quality: 80, progressive: true })
-    .toFile(photoOptPath);
-}
+      const photoOptDir = path.join(OPTIMISED_DIR, path.relative(EVENEMENTS_DIR, dossierPath));
+      await mkdir(photoOptDir, { recursive: true });
+      const photoOptPath = path.join(photoOptDir, photo.replace(/\.(jpg|jpeg)$/i, '-opt.jpg'));
+      if (!await stat(photoOptPath).catch(() => null)) {
+        await sharp(photoPath)
+          .resize(2000, 2000, { fit: 'inside', withoutEnlargement: true })
+          .jpeg({ quality: 80, progressive: true })
+          .toFile(photoOptPath);
+      }
 
-
-const photoOpt = photo.replace(/\.(jpg|jpeg)$/i, '-opt.jpg');
-photosData.push({ fichier: photoOpt, titre, tags, date: date ? date.toISOString() : null });      console.log(`${indent}  ✅ ${photo} — tags: [${tags.join(', ')}]`);
+      const photoOpt = photo.replace(/\.(jpg|jpeg)$/i, '-opt.jpg');
+      photosData.push({ fichier: photoOpt, titre, tags, date: date ? date.toISOString() : null });
+      console.log(`${indent}  ✅ ${photo} — tags: [${tags.join(', ')}]`);
     } catch {
       console.log(`${indent}  ⚠️  ${photo} — pas de métadonnées`);
       photosData.push({ fichier: photo, titre: photo, tags: [], date: null });
@@ -107,48 +106,45 @@ photosData.push({ fichier: photoOpt, titre, tags, date: date ? date.toISOString(
 
   const sousEvenements = [];
   for (const sousDossier of sousDossiers) {
-    const sousDossierPath = path.join(dossierPath, sousDossier);
-    const sousContentPath = path.join(contentPath, sousDossier);
-    await traiterDossier(sousDossierPath, sousContentPath, niveau + 1);
+    await traiterDossier(path.join(dossierPath, sousDossier), path.join(contentPath, sousDossier), niveau + 1);
     sousEvenements.push(sousDossier);
   }
 
-  const type = photos.length === 0 && sousDossiers.length > 0 ? 'categorie' : 'evenement';
+  // Type : préserver depuis sources/_index.json, sinon déduire
+  const typeCalcule = photos.length === 0 && sousDossiers.length > 0 ? 'categorie' : 'evenement';
+  const type = sourceMeta?.type || typeCalcule;
 
-  await mkdir(contentPath, { recursive: true });
-  const jsonPath = path.join(contentPath, '_index.json');
-  const existant = await lireJsonExistant(jsonPath);
+  // Pour les catégories, fusionner les sous-dossiers sources avec ceux listés manuellement
+  const sousExtra = sourceMeta?.type === 'categorie' ? (sourceMeta?.sousEvenements || []) : [];
+  const sousEvenementsFusionnes = [...new Set([...sousExtra, ...sousEvenements])];
 
   const premierDate = photosData.find(p => p.date)?.date || new Date().toISOString();
 
-  // Couverture : préserver l'existante, sinon première photo, sinon chercher dans sous-dossiers
-  /* let couverture = existant?.couverture || '';
+  // Couverture : depuis sources/_index.json, convertie en -opt si besoin
+  let couverture = sourceMeta?.couverture || '';
+  if (couverture && !couverture.includes('-opt.') && !couverture.includes('__FIRST__')) {
+    couverture = couverture.replace(/\.(jpg|jpeg)$/i, '-opt.jpg');
+  }
   if (!couverture || couverture.includes('__FIRST__')) {
-    couverture = photosData[0]?.fichier || await trouverPremierePhoto(contentPath, sousEvenements);
-  } */
-let couverture = existant?.couverture || '';
-// Mettre à jour la couverture vers -opt si nécessaire
-if (couverture && !couverture.includes('-opt.') && !couverture.includes('__FIRST__')) {
-  couverture = couverture.replace(/\.(jpg|jpeg)$/i, '-opt.$1');
-}
-if (!couverture || couverture.includes('__FIRST__')) {
-  couverture = photosData[0]?.fichier || await trouverPremierePhoto(contentPath, sousEvenements);
-}
+    couverture = photosData[0]?.fichier || await trouverPremierePhoto(contentPath, sousEvenementsFusionnes);
+  }
+
   const data = {
-    titre: existant?.titre || nomDossier.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase()),
+    titre: sourceMeta?.titre || nomDossier.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase()),
     type,
-    date: existant?.date || premierDate.split('T')[0],
+    date: sourceMeta?.date || premierDate.split('T')[0],
     "_aide_description": "Pour un saut de ligne, utilisez \\n entre les phrases",
-    description: existant?.description || '',
+    description: sourceMeta?.description || '',
     couverture,
     "_aide_categories": "Valeurs possibles : admin, famille-proche, famille-eloignee, jargeva, cabasson, public",
-    categories: existant?.categories || ['admin'],
-    videos: existant?.videos || [],
-    sousEvenements,
+    categories: sourceMeta?.categories || ['admin'],
+    videos: sourceMeta?.videos || [],
+    sousEvenements: sousEvenementsFusionnes,
     photos: photosData,
   };
 
-  await writeFile(jsonPath, JSON.stringify(data, null, 2));
+  await mkdir(contentPath, { recursive: true });
+  await writeFile(path.join(contentPath, '_index.json'), JSON.stringify(data, null, 2));
   console.log(`${indent}  💾 _index.json généré !`);
 }
 
@@ -158,8 +154,7 @@ for (const dossier of dossiers) {
   const dossierPath = path.join(EVENEMENTS_DIR, dossier);
   const s = await stat(dossierPath);
   if (!s.isDirectory()) continue;
-  const contentPath = path.join(CONTENT_DIR, dossier);
-  await traiterDossier(dossierPath, contentPath);
+  await traiterDossier(dossierPath, path.join(CONTENT_DIR, dossier));
 }
 
 console.log('\n✨ Import terminé !');

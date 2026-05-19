@@ -1,0 +1,297 @@
+{
+  "titre": "Exercice Pompier Avril24",
+  "type": "evenement",
+  "date": "2024-04-28",
+  "_aide_description": "Pour un saut de ligne, utilisez \\n entre les phrases",
+  "description": "",
+  "couverture": "1-_DSC9963-opt.jpg",
+  "_aide_categories": "Valeurs possibles : admin, famille-proche, famille-eloignee, jargeva, cabasson, public",
+  "categories": [
+    "admin",
+    "public"
+  ],
+  "videos": [],
+  "sousEvenements": [],
+  "photos": [
+    {
+      "fichier": "1-_DSC9963-opt.jpg",
+      "titre": "1-_DSC9963",
+      "tags": [
+        "pompier"
+      ],
+      "date": "2024-04-28T15:35:34.000Z"
+    },
+    {
+      "fichier": "2-_DSC9970-opt.jpg",
+      "titre": "2-_DSC9970",
+      "tags": [
+        "pompier"
+      ],
+      "date": "2024-04-28T15:38:03.000Z"
+    },
+    {
+      "fichier": "3-_DSC9993-opt.jpg",
+      "titre": "3-_DSC9993",
+      "tags": [
+        "pompier"
+      ],
+      "date": "2024-04-28T15:44:11.000Z"
+    },
+    {
+      "fichier": "4-_DSC9998-opt.jpg",
+      "titre": "4-_DSC9998",
+      "tags": [
+        "pompier"
+      ],
+      "date": "2024-04-28T15:46:14.000Z"
+    },
+    {
+      "fichier": "5-_DSC0003-opt.jpg",
+      "titre": "5-_DSC0003",
+      "tags": [
+        "pompier"
+      ],
+      "date": "2024-04-28T15:47:07.000Z"
+    },
+    {
+      "fichier": "6-_DSC0006-opt.jpg",
+      "titre": "6-_DSC0006",
+      "tags": [
+        "pompier"
+      ],
+      "date": "2024-04-28T15:47:53.000Z"
+    },
+    {
+      "fichier": "7-_DSC0012-opt.jpg",
+      "titre": "7-_DSC0012",
+      "tags": [
+        "pompier"
+      ],
+      "date": "2024-04-28T15:49:02.000Z"
+    },
+    {
+      "fichier": "8-_DSC0019-opt.jpg",
+      "titre": "8-_DSC0019",
+      "tags": [
+        "pompier"
+      ],
+      "date": "2024-04-28T15:53:09.000Z"
+    },
+    {
+      "fichier": "9-_DSC0022-opt.jpg",
+      "titre": "9-_DSC0022",
+      "tags": [
+        "pompier"
+      ],
+      "date": "2024-04-28T15:53:23.000Z"
+    },
+    {
+      "fichier": "10-_DSC0023-opt.jpg",
+      "titre": "10-_DSC0023",
+      "tags": [
+        "pompier"
+      ],
+      "date": "2024-04-28T15:53:31.000Z"
+    },
+    {
+      "fichier": "11-_DSC0024-opt.jpg",
+      "titre": "11-_DSC0024",
+      "tags": [
+        "pompier"
+      ],
+      "date": "2024-04-28T15:53:38.000Z"
+    },
+    {
+      "fichier": "12-_DSC0025-opt.jpg",
+      "titre": "12-_DSC0025",
+      "tags": [
+        "pompier"
+      ],
+      "date": "2024-04-28T15:53:54.000Z"
+    },
+    {
+      "fichier": "13-_DSC0027-opt.jpg",
+      "titre": "13-_DSC0027",
+      "tags": [
+        "pompier"
+      ],
+      "date": "2024-04-28T15:54:49.000Z"
+    },
+    {
+      "fichier": "14-_DSC0030-opt.jpg",
+      "titre": "14-_DSC0030",
+      "tags": [
+        "pompier"
+      ],
+      "date": "2024-04-28T15:56:31.000Z"
+    },
+    {
+      "fichier": "15-_DSC0039-opt.jpg",
+      "titre": "15-_DSC0039",
+      "tags": [
+        "pompier"
+      ],
+      "date": "2024-04-28T15:57:02.000Z"
+    },
+    {
+      "fichier": "16-_DSC0040-opt.jpg",
+      "titre": "16-_DSC0040",
+      "tags": [
+        "pompier"
+      ],
+      "date": "2024-04-28T15:57:33.000Z"
+    },
+    {
+      "fichier": "17-_DSC0053-opt.jpg",
+      "titre": "17-_DSC0053",
+      "tags": [
+        "pompier"
+      ],
+      "date": "2024-04-28T15:59:47.000Z"
+    },
+    {
+      "fichier": "18-_DSC0084-opt.jpg",
+      "titre": "18-_DSC0084",
+      "tags": [
+        "pompier"
+      ],
+      "date": "2024-04-28T16:02:55.000Z"
+    },
+    {
+      "fichier": "19-_DSC0086-opt.jpg",
+      "titre": "19-_DSC0086",
+      "tags": [
+        "pompier"
+      ],
+      "date": "2024-04-28T16:03:14.000Z"
+    },
+    {
+      "fichier": "20-_DSC0088-opt.jpg",
+      "titre": "20-_DSC0088",
+      "tags": [
+        "pompier"
+      ],
+      "date": "2024-04-28T16:03:25.000Z"
+    },
+    {
+      "fichier": "21-_DSC0094-opt.jpg",
+      "titre": "21-_DSC0094",
+      "tags": [
+        "pompier"
+      ],
+      "date": "2024-04-28T16:03:54.000Z"
+    },
+    {
+      "fichier": "22-_DSC0110-opt.jpg",
+      "titre": "22-_DSC0110",
+      "tags": [
+        "pompier"
+      ],
+      "date": "2024-04-28T16:06:43.000Z"
+    },
+    {
+      "fichier": "23-_DSC0126-opt.jpg",
+      "titre": "23-_DSC0126",
+      "tags": [
+        "pompier"
+      ],
+      "date": "2024-04-28T16:08:03.000Z"
+    },
+    {
+      "fichier": "24-_DSC0140-opt.jpg",
+      "titre": "24-_DSC0140",
+      "tags": [
+        "pompier"
+      ],
+      "date": "2024-04-28T16:08:55.000Z"
+    },
+    {
+      "fichier": "25-_DSC0143-opt.jpg",
+      "titre": "25-_DSC0143",
+      "tags": [
+        "pompier"
+      ],
+      "date": "2024-04-28T16:09:00.000Z"
+    },
+    {
+      "fichier": "26-_DSC0144-opt.jpg",
+      "titre": "26-_DSC0144",
+      "tags": [
+        "pompier"
+      ],
+      "date": "2024-04-28T16:09:02.000Z"
+    },
+    {
+      "fichier": "27-_DSC0164-opt.jpg",
+      "titre": "27-_DSC0164",
+      "tags": [
+        "pompier"
+      ],
+      "date": "2024-04-28T16:10:28.000Z"
+    },
+    {
+      "fichier": "28-_DSC0249-opt.jpg",
+      "titre": "28-_DSC0249",
+      "tags": [
+        "pompier"
+      ],
+      "date": "2024-04-28T16:22:33.000Z"
+    },
+    {
+      "fichier": "29-_DSC0264-opt.jpg",
+      "titre": "29-_DSC0264",
+      "tags": [
+        "pompier"
+      ],
+      "date": "2024-04-28T16:23:49.000Z"
+    },
+    {
+      "fichier": "30-_DSC0266-opt.jpg",
+      "titre": "30-_DSC0266",
+      "tags": [
+        "pompier"
+      ],
+      "date": "2024-04-28T16:23:54.000Z"
+    },
+    {
+      "fichier": "31-_DSC0279-opt.jpg",
+      "titre": "31-_DSC0279",
+      "tags": [
+        "pompier"
+      ],
+      "date": "2024-04-28T16:25:07.000Z"
+    },
+    {
+      "fichier": "32-_DSC0285-opt.jpg",
+      "titre": "32-_DSC0285",
+      "tags": [
+        "pompier"
+      ],
+      "date": "2024-04-28T16:25:33.000Z"
+    },
+    {
+      "fichier": "33-_DSC0304-opt.jpg",
+      "titre": "33-_DSC0304",
+      "tags": [
+        "pompier"
+      ],
+      "date": "2024-04-28T16:27:56.000Z"
+    },
+    {
+      "fichier": "34-_DSC0311-opt.jpg",
+      "titre": "34-_DSC0311",
+      "tags": [
+        "pompier"
+      ],
+      "date": "2024-04-28T16:30:51.000Z"
+    },
+    {
+      "fichier": "35-_DSC0330-opt.jpg",
+      "titre": "35-_DSC0330",
+      "tags": [
+        "pompier"
+      ],
+      "date": "2024-04-28T16:35:57.000Z"
+    }
+  ]
+}

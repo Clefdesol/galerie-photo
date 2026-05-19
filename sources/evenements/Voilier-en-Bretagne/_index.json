@@ -1,0 +1,854 @@
+{
+  "titre": "Voilier En Bretagne",
+  "type": "evenement",
+  "date": "2025-10-18",
+  "_aide_description": "Pour un saut de ligne, utilisez \\n entre les phrases",
+  "description": "",
+  "couverture": "1-IMG_4665-opt.jpg",
+  "_aide_categories": "Valeurs possibles : admin, famille-proche, famille-eloignee, jargeva, cabasson, public",
+  "categories": [
+    "admin",
+    "famille-eloignee"
+  ],
+  "videos": [],
+  "sousEvenements": [],
+  "photos": [
+    {
+      "fichier": "1-IMG_4665-opt.jpg",
+      "titre": "1-IMG_4665",
+      "tags": [
+        "Activités",
+        "Bateau",
+        "Bretagne",
+        "Lieu:"
+      ],
+      "date": "2025-10-18T11:41:54.000Z"
+    },
+    {
+      "fichier": "2-IMG_4676-opt.jpg",
+      "titre": "2-IMG_4676",
+      "tags": [
+        "Activités",
+        "Bateau",
+        "Bretagne",
+        "Lieu:"
+      ],
+      "date": "2025-10-18T12:45:47.000Z"
+    },
+    {
+      "fichier": "3-IMG_4683-opt.jpg",
+      "titre": "3-IMG_4683",
+      "tags": [
+        "Bretagne",
+        "Lieu:"
+      ],
+      "date": "2025-10-18T12:56:22.000Z"
+    },
+    {
+      "fichier": "4-IMG_4699-opt.jpg",
+      "titre": "4-IMG_4699",
+      "tags": [
+        "Activités",
+        "Bateau",
+        "Bretagne",
+        "Lieu:"
+      ],
+      "date": "2025-10-18T14:05:03.000Z"
+    },
+    {
+      "fichier": "5-79a89d7e-ac32-4fac-a66e-e5f6a0cf071e-opt.jpg",
+      "titre": "5-79a89d7e-ac32-4fac-a66e-e5f6a0cf071e",
+      "tags": [
+        "Bretagne",
+        "Lieu:",
+        "Léo"
+      ],
+      "date": "2025-10-18T14:32:46.000Z"
+    },
+    {
+      "fichier": "6-IMG_4701-opt.jpg",
+      "titre": "6-IMG_4701",
+      "tags": [
+        "Activités",
+        "Bateau",
+        "Bretagne",
+        "Lieu:"
+      ],
+      "date": "2025-10-18T16:30:51.000Z"
+    },
+    {
+      "fichier": "7-074ee0cf-1a62-4623-8495-d3e75046b569-opt.jpg",
+      "titre": "7-074ee0cf-1a62-4623-8495-d3e75046b569",
+      "tags": [
+        "Activités",
+        "Bateau",
+        "Bretagne",
+        "Clélia",
+        "Enya",
+        "Grégoire",
+        "Lieu:",
+        "Léo",
+        "ProjetParis",
+        "Projets:"
+      ],
+      "date": "2025-10-18T18:05:17.000Z"
+    },
+    {
+      "fichier": "8-ad204acf-c1ba-4189-a230-71b8120fcb91-opt.jpg",
+      "titre": "8-ad204acf-c1ba-4189-a230-71b8120fcb91",
+      "tags": [
+        "Activités",
+        "Bretagne",
+        "Clélia",
+        "Cuisine",
+        "Enya",
+        "Grégoire",
+        "Gérard",
+        "Isabelle",
+        "Lieu:",
+        "Léo",
+        "Patisserie",
+        "Personages:",
+        "ProjetParis",
+        "Projets:",
+        "Repas",
+        "Vie quotidienne",
+        "Visages"
+      ],
+      "date": "2025-10-19T08:22:06.000Z"
+    },
+    {
+      "fichier": "9-IMG_4715-opt.jpg",
+      "titre": "9-IMG_4715",
+      "tags": [
+        "Bretagne",
+        "Gérard",
+        "Lieu:",
+        "Personages:",
+        "Visages"
+      ],
+      "date": "2025-10-19T08:46:14.000Z"
+    },
+    {
+      "fichier": "10-b5bf426c-6c93-4c89-ad6e-9e8137293120-opt.jpg",
+      "titre": "10-b5bf426c-6c93-4c89-ad6e-9e8137293120",
+      "tags": [
+        "Bretagne",
+        "Grégoire",
+        "Lieu:",
+        "Léo"
+      ],
+      "date": "2025-10-19T13:00:26.000Z"
+    },
+    {
+      "fichier": "11-IMG_4728-opt.jpg",
+      "titre": "11-IMG_4728",
+      "tags": [
+        "Bretagne",
+        "Enya",
+        "Lieu:",
+        "Léo",
+        "ProjetParis",
+        "Projets:"
+      ],
+      "date": "2025-10-19T15:23:23.000Z"
+    },
+    {
+      "fichier": "12-IMG_4735-opt.jpg",
+      "titre": "12-IMG_4735",
+      "tags": [
+        "Activités",
+        "Bateau",
+        "Bretagne",
+        "Lieu:"
+      ],
+      "date": "2025-10-19T19:30:26.000Z"
+    },
+    {
+      "fichier": "13-IMG_4748-opt.jpg",
+      "titre": "13-IMG_4748",
+      "tags": [
+        "Activités",
+        "Bretagne",
+        "Lieu:",
+        "Lit",
+        "Vie quotidienne"
+      ],
+      "date": "2025-10-19T20:39:27.000Z"
+    },
+    {
+      "fichier": "14-IMG_4762-opt.jpg",
+      "titre": "14-IMG_4762",
+      "tags": [
+        "Activités",
+        "Bateau",
+        "Bretagne",
+        "Clélia",
+        "Enya",
+        "Grégoire",
+        "Isabelle",
+        "Lieu:",
+        "Léo",
+        "ProjetParis",
+        "Projets:"
+      ],
+      "date": "2025-10-20T09:37:31.000Z"
+    },
+    {
+      "fichier": "15-IMG_3424-opt.jpg",
+      "titre": "15-IMG_3424",
+      "tags": [
+        "Bretagne",
+        "Enya",
+        "Lieu:",
+        "ProjetParis",
+        "Projets:"
+      ],
+      "date": "2025-10-20T11:05:18.000Z"
+    },
+    {
+      "fichier": "16-IMG_4779-opt.jpg",
+      "titre": "16-IMG_4779",
+      "tags": [
+        "Activités",
+        "Bretagne",
+        "Chateau",
+        "Lieu:",
+        "Plage"
+      ],
+      "date": "2025-10-20T11:21:20.000Z"
+    },
+    {
+      "fichier": "17-IMG_4781-opt.jpg",
+      "titre": "17-IMG_4781",
+      "tags": [
+        "Bretagne",
+        "Isabelle",
+        "Lieu:"
+      ],
+      "date": "2025-10-20T11:21:36.000Z"
+    },
+    {
+      "fichier": "18-IMG_4785-opt.jpg",
+      "titre": "18-IMG_4785",
+      "tags": [
+        "Activités",
+        "Bretagne",
+        "Chateau",
+        "Lieu:",
+        "Plage"
+      ],
+      "date": "2025-10-20T11:25:17.000Z"
+    },
+    {
+      "fichier": "19-IMG_4788-opt.jpg",
+      "titre": "19-IMG_4788",
+      "tags": [
+        "Bretagne",
+        "Lieu:",
+        "Mer"
+      ],
+      "date": "2025-10-20T11:26:47.000Z"
+    },
+    {
+      "fichier": "20-IMG_4790-opt.jpg",
+      "titre": "20-IMG_4790",
+      "tags": [
+        "Activités",
+        "Bretagne",
+        "Chateau",
+        "Lieu:",
+        "Mer",
+        "Plage"
+      ],
+      "date": "2025-10-20T11:27:17.000Z"
+    },
+    {
+      "fichier": "21-IMG_3435-opt.jpg",
+      "titre": "21-IMG_3435",
+      "tags": [
+        "Activités",
+        "Bretagne",
+        "Grégoire",
+        "Lieu:",
+        "Pêche"
+      ],
+      "date": "2025-10-20T16:00:54.000Z"
+    },
+    {
+      "fichier": "22-IMG_4814-opt.jpg",
+      "titre": "22-IMG_4814",
+      "tags": [
+        "Activités",
+        "Bateau",
+        "Bretagne",
+        "Lieu:",
+        "Mer",
+        "Pêche"
+      ],
+      "date": "2025-10-20T16:35:16.000Z"
+    },
+    {
+      "fichier": "23-IMG_3446-opt.jpg",
+      "titre": "23-IMG_3446",
+      "tags": [
+        "Activités",
+        "Bretagne",
+        "Cuisine",
+        "Lieu:",
+        "Patisserie",
+        "ProjetParis",
+        "Projets:",
+        "Pêche",
+        "Repas",
+        "Vie quotidienne"
+      ],
+      "date": "2025-10-20T17:13:03.000Z"
+    },
+    {
+      "fichier": "24-IMG_4835-opt.jpg",
+      "titre": "24-IMG_4835",
+      "tags": [
+        "Activités",
+        "Bretagne",
+        "Cuisine",
+        "Lieu:",
+        "Patisserie",
+        "ProjetParis",
+        "Projets:",
+        "Pêche",
+        "Repas",
+        "Vie quotidienne"
+      ],
+      "date": "2025-10-20T17:14:58.000Z"
+    },
+    {
+      "fichier": "25-IMG_4846-opt.jpg",
+      "titre": "25-IMG_4846",
+      "tags": [
+        "Activités",
+        "Bateau",
+        "Bretagne",
+        "Cuisine",
+        "Lieu:",
+        "Patisserie",
+        "ProjetParis",
+        "Projets:",
+        "Pêche",
+        "Repas",
+        "Vie quotidienne"
+      ],
+      "date": "2025-10-20T17:27:31.000Z"
+    },
+    {
+      "fichier": "26-3300889e-a1b4-4468-9c1a-e9c8f8631b61-opt.jpg",
+      "titre": "26-3300889e-a1b4-4468-9c1a-e9c8f8631b61",
+      "tags": [
+        "Activités",
+        "Bateau",
+        "Bretagne",
+        "Enya",
+        "Lieu:",
+        "ProjetParis",
+        "Projets:",
+        "Pêche"
+      ],
+      "date": "2025-10-20T18:16:15.000Z"
+    },
+    {
+      "fichier": "27-8bdc559d-0154-4d7e-9e2d-fd255a356a35-opt.jpg",
+      "titre": "27-8bdc559d-0154-4d7e-9e2d-fd255a356a35",
+      "tags": [
+        "Activités",
+        "Bretagne",
+        "Lieu:",
+        "Léo",
+        "Plage",
+        "Pêche"
+      ],
+      "date": "2025-10-20T18:16:57.000Z"
+    },
+    {
+      "fichier": "28-113c49b4-16ce-432a-aebe-5fb4a3e340e3-opt.jpg",
+      "titre": "28-113c49b4-16ce-432a-aebe-5fb4a3e340e3",
+      "tags": [
+        "Activités",
+        "Bateau",
+        "Bretagne",
+        "Lieu:",
+        "Pêche"
+      ],
+      "date": "2025-10-20T18:16:58.000Z"
+    },
+    {
+      "fichier": "29-IMG_4887-opt.jpg",
+      "titre": "29-IMG_4887",
+      "tags": [
+        "Activités",
+        "Bretagne",
+        "Cuisine",
+        "Lieu:",
+        "Patisserie",
+        "ProjetParis",
+        "Projets:",
+        "Pêche",
+        "Repas",
+        "Vie quotidienne"
+      ],
+      "date": "2025-10-20T18:49:18.000Z"
+    },
+    {
+      "fichier": "30-2c72da56-1897-4032-9f33-b6456b5f24cf-opt.jpg",
+      "titre": "30-2c72da56-1897-4032-9f33-b6456b5f24cf",
+      "tags": [
+        "Activités",
+        "Bateau",
+        "Bretagne",
+        "Lieu:",
+        "Pêche"
+      ],
+      "date": "2025-10-21T19:22:50.000Z"
+    },
+    {
+      "fichier": "31-8f7659aa-a2e4-477a-bf77-1a8584815d6c-opt.jpg",
+      "titre": "31-8f7659aa-a2e4-477a-bf77-1a8584815d6c",
+      "tags": [
+        "Activités",
+        "Bateau",
+        "Bretagne",
+        "Enya",
+        "Jean-Pierre",
+        "Lieu:",
+        "Léo",
+        "ProjetParis",
+        "Projets:",
+        "Pêche"
+      ],
+      "date": "2025-10-21T19:23:53.000Z"
+    },
+    {
+      "fichier": "32-907b6c16-7475-4de7-9059-696add95ab78-opt.jpg",
+      "titre": "32-907b6c16-7475-4de7-9059-696add95ab78",
+      "tags": [
+        "Activités",
+        "Bateau",
+        "Bretagne",
+        "Enya",
+        "Lieu:",
+        "ProjetParis",
+        "Projets:",
+        "Pêche"
+      ],
+      "date": "2025-10-21T19:23:53.000Z"
+    },
+    {
+      "fichier": "33-d4fa3d16-b4d7-43a6-837f-26deb41b4e21-opt.jpg",
+      "titre": "33-d4fa3d16-b4d7-43a6-837f-26deb41b4e21",
+      "tags": [
+        "Activités",
+        "Bateau",
+        "Bretagne",
+        "Jean-Pierre",
+        "Lieu:",
+        "Pêche"
+      ],
+      "date": "2025-10-21T19:24:08.000Z"
+    },
+    {
+      "fichier": "34-7e09cdfb-32b7-4ea6-921b-73e69c628611-opt.jpg",
+      "titre": "34-7e09cdfb-32b7-4ea6-921b-73e69c628611",
+      "tags": [
+        "Activités",
+        "Bretagne",
+        "Isabelle",
+        "Lieu:",
+        "Pêche"
+      ],
+      "date": "2025-10-21T19:24:10.000Z"
+    },
+    {
+      "fichier": "35-1f911b4d-eac2-4a14-ab65-47feb0b87387-opt.jpg",
+      "titre": "35-1f911b4d-eac2-4a14-ab65-47feb0b87387",
+      "tags": [
+        "Activités",
+        "Bateau",
+        "Bretagne",
+        "Lieu:",
+        "Mer",
+        "Pêche"
+      ],
+      "date": "2025-10-21T19:26:37.000Z"
+    },
+    {
+      "fichier": "36-83777cb5-711d-4762-bb10-e950fd5c5597-opt.jpg",
+      "titre": "36-83777cb5-711d-4762-bb10-e950fd5c5597",
+      "tags": [
+        "Activités",
+        "Bateau",
+        "Bretagne",
+        "Enya",
+        "Grégoire",
+        "Lieu:",
+        "ProjetParis",
+        "Projets:",
+        "Pêche"
+      ],
+      "date": "2025-10-21T19:26:37.000Z"
+    },
+    {
+      "fichier": "37-b3b6cb2f-9b7d-4604-8644-8f23515aee47-opt.jpg",
+      "titre": "37-b3b6cb2f-9b7d-4604-8644-8f23515aee47",
+      "tags": [
+        "Activités",
+        "Bretagne",
+        "Clélia",
+        "Lieu:",
+        "Pêche"
+      ],
+      "date": "2025-10-21T19:26:38.000Z"
+    },
+    {
+      "fichier": "38-e8997939-08c3-4ee9-9370-bd521c0e5297-opt.jpg",
+      "titre": "38-e8997939-08c3-4ee9-9370-bd521c0e5297",
+      "tags": [
+        "Activités",
+        "Bateau",
+        "Bretagne",
+        "Lieu:",
+        "Pêche"
+      ],
+      "date": "2025-10-21T19:26:40.000Z"
+    },
+    {
+      "fichier": "39-40f5a1e2-98e1-46ce-b2ee-0951cf312bb0-opt.jpg",
+      "titre": "39-40f5a1e2-98e1-46ce-b2ee-0951cf312bb0",
+      "tags": [
+        "Activités",
+        "Bateau",
+        "Bretagne",
+        "Lieu:",
+        "Léo",
+        "Pêche"
+      ],
+      "date": "2025-10-21T19:26:41.000Z"
+    },
+    {
+      "fichier": "40-a5c0b7a1-46b6-4ce1-8c16-540514a2eec4-opt.jpg",
+      "titre": "40-a5c0b7a1-46b6-4ce1-8c16-540514a2eec4",
+      "tags": [
+        "Activités",
+        "Bateau",
+        "Bretagne",
+        "Lieu:",
+        "Pêche"
+      ],
+      "date": "2025-10-21T19:26:56.000Z"
+    },
+    {
+      "fichier": "41-c1bdc021-05b7-450c-9853-a0c0ffd42f4c-opt.jpg",
+      "titre": "41-c1bdc021-05b7-450c-9853-a0c0ffd42f4c",
+      "tags": [
+        "Activités",
+        "Bretagne",
+        "Lieu:",
+        "Pêche"
+      ],
+      "date": "2025-10-22T18:27:57.000Z"
+    },
+    {
+      "fichier": "42-83322b46-8dd3-4b5b-9cc6-79e3ba58812c-opt.jpg",
+      "titre": "42-83322b46-8dd3-4b5b-9cc6-79e3ba58812c",
+      "tags": [
+        "Activités",
+        "Bretagne",
+        "Lieu:",
+        "Pêche"
+      ],
+      "date": "2025-10-22T18:28:21.000Z"
+    },
+    {
+      "fichier": "43-IMG_4971-opt.jpg",
+      "titre": "43-IMG_4971",
+      "tags": [
+        "Activités",
+        "Bateau",
+        "Bretagne",
+        "Lieu:",
+        "Pêche"
+      ],
+      "date": "2025-10-23T07:39:58.000Z"
+    },
+    {
+      "fichier": "44-67848d7b-cfe1-4908-9b61-e6e508863cde-opt.jpg",
+      "titre": "44-67848d7b-cfe1-4908-9b61-e6e508863cde",
+      "tags": [
+        "Activités",
+        "Bretagne",
+        "Clélia",
+        "Cuisine",
+        "Enya",
+        "Grégoire",
+        "Isabelle",
+        "Jean-Pierre",
+        "Lieu:",
+        "Léo",
+        "Patisserie",
+        "ProjetParis",
+        "Projets:",
+        "Pêche",
+        "Repas",
+        "Vie quotidienne"
+      ],
+      "date": "2025-10-23T09:24:12.000Z"
+    },
+    {
+      "fichier": "45-IMG_4982-opt.jpg",
+      "titre": "45-IMG_4982",
+      "tags": [
+        "Activités",
+        "Bretagne",
+        "Clélia",
+        "Cuisine",
+        "Lieu:",
+        "Patisserie",
+        "ProjetParis",
+        "Projets:",
+        "Pêche",
+        "Repas",
+        "Vie quotidienne"
+      ],
+      "date": "2025-10-23T13:11:27.000Z"
+    },
+    {
+      "fichier": "46-665328df-58fc-4824-b96d-24d833c120d3-opt.jpg",
+      "titre": "46-665328df-58fc-4824-b96d-24d833c120d3",
+      "tags": [
+        "Activités",
+        "Bateau",
+        "Bretagne",
+        "Isabelle",
+        "Jean-Pierre",
+        "Lieu:",
+        "Léo",
+        "Pêche"
+      ],
+      "date": "2025-10-23T13:18:04.000Z"
+    },
+    {
+      "fichier": "47-bcc397b9-b0c7-47be-8be5-bacd51585914-opt.jpg",
+      "titre": "47-bcc397b9-b0c7-47be-8be5-bacd51585914",
+      "tags": [
+        "Activités",
+        "Bateau",
+        "Bretagne",
+        "Clélia",
+        "Lieu:",
+        "Pêche"
+      ],
+      "date": "2025-10-23T13:18:05.000Z"
+    },
+    {
+      "fichier": "48-c3a5b483-1cad-4ea9-b275-b6b7b2fa3c9f-opt.jpg",
+      "titre": "48-c3a5b483-1cad-4ea9-b275-b6b7b2fa3c9f",
+      "tags": [
+        "Activités",
+        "Bateau",
+        "Bretagne",
+        "Lieu:",
+        "Mer",
+        "Pêche"
+      ],
+      "date": "2025-10-23T13:18:10.000Z"
+    },
+    {
+      "fichier": "49-6f10b684-5919-4f84-878e-fb3d29391ef1-opt.jpg",
+      "titre": "49-6f10b684-5919-4f84-878e-fb3d29391ef1",
+      "tags": [
+        "Activités",
+        "Bateau",
+        "Bretagne",
+        "Lieu:",
+        "Mer",
+        "Pêche"
+      ],
+      "date": "2025-10-23T13:18:35.000Z"
+    },
+    {
+      "fichier": "50-a4304914-0dc7-427f-9265-e1cc093b31ff-opt.jpg",
+      "titre": "50-a4304914-0dc7-427f-9265-e1cc093b31ff",
+      "tags": [
+        "Activités",
+        "Bateau",
+        "Bretagne",
+        "Isabelle",
+        "Lieu:"
+      ],
+      "date": "2025-10-23T13:18:37.000Z"
+    },
+    {
+      "fichier": "51-7a709b8e-8967-49ee-ab03-94eed63bd28a-opt.jpg",
+      "titre": "51-7a709b8e-8967-49ee-ab03-94eed63bd28a",
+      "tags": [
+        "Activités",
+        "Bateau",
+        "Bretagne",
+        "Clélia",
+        "Grégoire",
+        "Lieu:"
+      ],
+      "date": "2025-10-23T13:18:38.000Z"
+    },
+    {
+      "fichier": "52-0d059a8a-b0d6-4175-ba47-287440d33fb6-opt.jpg",
+      "titre": "52-0d059a8a-b0d6-4175-ba47-287440d33fb6",
+      "tags": [
+        "Bretagne",
+        "Jean-Pierre",
+        "Lieu:"
+      ],
+      "date": "2025-10-23T13:18:42.000Z"
+    },
+    {
+      "fichier": "53-c8cc7648-58d4-42c1-95ae-b718d0ed5957-opt.jpg",
+      "titre": "53-c8cc7648-58d4-42c1-95ae-b718d0ed5957",
+      "tags": [
+        "Activités",
+        "Bateau",
+        "Bretagne",
+        "Lieu:"
+      ],
+      "date": "2025-10-23T16:29:33.000Z"
+    },
+    {
+      "fichier": "54-IMG_5033-opt.jpg",
+      "titre": "54-IMG_5033",
+      "tags": [
+        "Bretagne",
+        "Isabelle",
+        "Lieu:"
+      ],
+      "date": "2025-10-23T18:17:31.000Z"
+    },
+    {
+      "fichier": "55-IMG_5036-opt.jpg",
+      "titre": "55-IMG_5036",
+      "tags": [
+        "Bretagne",
+        "Isabelle",
+        "Lieu:"
+      ],
+      "date": "2025-10-23T18:59:07.000Z"
+    },
+    {
+      "fichier": "56-IMG_5037-opt.jpg",
+      "titre": "56-IMG_5037",
+      "tags": [
+        "Bretagne",
+        "Clélia",
+        "Enya",
+        "Grégoire",
+        "Lieu:",
+        "Léo",
+        "ProjetParis",
+        "Projets:"
+      ],
+      "date": "2025-10-23T18:59:24.000Z"
+    },
+    {
+      "fichier": "57-IMG_5038-opt.jpg",
+      "titre": "57-IMG_5038",
+      "tags": [
+        "Activités",
+        "Bretagne",
+        "Cuisine",
+        "Lieu:",
+        "Patisserie",
+        "ProjetParis",
+        "Projets:",
+        "Repas",
+        "Vie quotidienne"
+      ],
+      "date": "2025-10-23T19:44:51.000Z"
+    },
+    {
+      "fichier": "58-1ae1e3b0-c422-444a-8e47-7c9cfe45da19-opt.jpg",
+      "titre": "58-1ae1e3b0-c422-444a-8e47-7c9cfe45da19",
+      "tags": [
+        "Activités",
+        "Bateau",
+        "Bretagne",
+        "Grégoire",
+        "Lieu:",
+        "Mer"
+      ],
+      "date": "2025-10-24T18:24:46.000Z"
+    },
+    {
+      "fichier": "59-54f50d95-6ec3-4af9-9031-6019007c909d-opt.jpg",
+      "titre": "59-54f50d95-6ec3-4af9-9031-6019007c909d",
+      "tags": [
+        "Activités",
+        "Bateau",
+        "Bretagne",
+        "Enya",
+        "Lieu:",
+        "ProjetParis",
+        "Projets:"
+      ],
+      "date": "2025-10-24T18:24:46.000Z"
+    },
+    {
+      "fichier": "60-4b8d226a-97ec-4f23-a411-02761fc21c39-opt.jpg",
+      "titre": "60-4b8d226a-97ec-4f23-a411-02761fc21c39",
+      "tags": [
+        "Activités",
+        "Bretagne",
+        "Chateau",
+        "Lieu:",
+        "Mer",
+        "Plage"
+      ],
+      "date": "2025-10-24T18:25:12.000Z"
+    },
+    {
+      "fichier": "61-9001de7d-bf28-4d76-93bd-5e78056143f2-opt.jpg",
+      "titre": "61-9001de7d-bf28-4d76-93bd-5e78056143f2",
+      "tags": [
+        "Activités",
+        "Bateau",
+        "Bretagne",
+        "Lieu:",
+        "Mer"
+      ],
+      "date": "2025-10-24T18:26:38.000Z"
+    },
+    {
+      "fichier": "62-5f09668b-5a83-47ef-9782-ab4bb51e8f36-opt.jpg",
+      "titre": "62-5f09668b-5a83-47ef-9782-ab4bb51e8f36",
+      "tags": [
+        "Activités",
+        "Bateau",
+        "Bretagne",
+        "Lieu:",
+        "Mer"
+      ],
+      "date": "2025-10-24T18:26:45.000Z"
+    },
+    {
+      "fichier": "63-IMG_5159-opt.jpg",
+      "titre": "63-IMG_5159",
+      "tags": [
+        "Activités",
+        "Bretagne",
+        "Cuisine",
+        "Lieu:",
+        "Patisserie",
+        "ProjetParis",
+        "Projets:",
+        "Repas",
+        "Vie quotidienne"
+      ],
+      "date": "2025-10-24T19:43:10.000Z"
+    }
+  ]
+}

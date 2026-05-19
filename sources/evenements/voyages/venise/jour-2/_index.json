@@ -1,0 +1,40 @@
+{
+  "titre": "Jour 2",
+  "type": "evenement",
+  "date": "2026-04-04",
+  "_aide_description": "Pour un saut de ligne, utilisez \\n entre les phrases",
+  "description": "",
+  "couverture": "IMG_9812-opt.jpg",
+  "_aide_categories": "Valeurs possibles : admin, famille-proche, famille-eloignee, jargeva, cabasson, public",
+  "categories": [
+    "admin"
+  ],
+  "videos": [],
+  "sousEvenements": [],
+  "photos": [
+    {
+      "fichier": "IMG_9784-opt.jpg",
+      "titre": "IMG_9784",
+      "tags": [],
+      "date": "2026-04-04T08:22:13.000Z"
+    },
+    {
+      "fichier": "IMG_9788-opt.jpg",
+      "titre": "IMG_9788",
+      "tags": [],
+      "date": "2026-04-04T09:48:42.000Z"
+    },
+    {
+      "fichier": "IMG_9812-opt.jpg",
+      "titre": "IMG_9812",
+      "tags": [],
+      "date": "2026-04-04T11:39:53.000Z"
+    },
+    {
+      "fichier": "IMG_9816-opt.jpg",
+      "titre": "IMG_9816",
+      "tags": [],
+      "date": "2026-04-04T15:06:50.000Z"
+    }
+  ]
+}

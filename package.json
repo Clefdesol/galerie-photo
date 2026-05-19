@@ -11,6 +11,7 @@
     "preview": "astro preview",
     "astro": "astro",
     "import": "node scripts/import-lightroom.mjs",
+    "reorg": "node scripts/reorganiser.mjs",
     "deploy": "npm run import && npm run build"
   },
   "dependencies": {

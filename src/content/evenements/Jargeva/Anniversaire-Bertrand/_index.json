@@ -1,0 +1,34 @@
+{
+  "titre": "Bertrand",
+  "type": "evenement",
+  "date": "2026-05-09",
+  "_aide_description": "Pour un saut de ligne, utilisez \\n entre les phrases",
+  "description": "Le film Jargeva pour les 70 ans de Bertrand",
+  "couverture": "Vignette-electricien-opt.jpg",
+  "_aide_categories": "Valeurs possibles : admin, famille-proche, famille-eloignee, jargeva, cabasson, public",
+  "categories": [
+    "jargeva",
+    "admin"
+  ],
+  "videos": [
+    {
+      "titre": "70 ans de Bertrand",
+      "youtubeId": "DYHnSoGVgsA",
+      "type": "normal",
+      "tags": [
+        "Jargeva",
+        "Anniversaire",
+        "Bertrand"
+      ]
+    }
+  ],
+  "sousEvenements": [],
+  "photos": [
+    {
+      "fichier": "Vignette-electricien-opt.jpg",
+      "titre": "Vignette-electricien",
+      "tags": [],
+      "date": null
+    }
+  ]
+}

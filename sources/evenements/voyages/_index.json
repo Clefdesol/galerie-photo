@@ -1,0 +1,20 @@
+{
+  "titre": "Voyages",
+  "type": "categorie",
+  "date": "2026-05-12",
+  "_aide_description": "Pour un saut de ligne, utilisez \\n entre les phrases",
+  "description": "",
+  "couverture": "rome/hotel/1-IMG_7557-opt.jpg",
+  "_aide_categories": "Valeurs possibles : admin, famille-proche, famille-eloignee, jargeva, cabasson, public",
+  "categories": [
+    "famille-proche",
+    "jargeva",
+    "admin"
+  ],
+  "videos": [],
+  "sousEvenements": [
+    "rome",
+    "venise"
+  ],
+  "photos": []
+}
