@@ -112,7 +112,7 @@ const parentSlug = slugParts.length > 1 ? slugParts.slice(0, -1).join('/') : nul
       <div class="mb-12">
         <p class="text-xs text-amber-400 tracking-widest uppercase mb-6">Vidéos</p>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {ev.videos.map(video => (
+          {ev.videos.filter(v => v.youtubeId).map(video => (
             <div class="video-item" data-tags={(video.tags || []).join(',')}>
               <div style={video.type === 'short' ? 'position:relative;padding-bottom:177%;height:0;overflow:hidden;max-width:320px;' : 'position:relative;padding-bottom:56.25%;height:0;overflow:hidden;'}>
                 <iframe

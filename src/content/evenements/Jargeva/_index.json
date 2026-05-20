@@ -4,7 +4,7 @@
   "date": "2026-05-01",
   "_aide_description": "Pour un saut de ligne, utilisez \\n entre les phrases",
   "description": "Pour les films",
-  "couverture": "Anniversaire-Bertrand/Vignette-electricien-opt.jpg",
+  "couverture": "Annivesaire-Bertrand/Charly/Vignette-Charly-opt.jpg",
   "_aide_categories": "Valeurs possibles : admin, famille-proche, famille-eloignee, jargeva, cabasson, public",
   "categories": [
     "jargeva",
@@ -12,9 +12,8 @@
   ],
   "videos": [],
   "sousEvenements": [
-    "Anniversaire-Bertrand",
-    "Charly",
-    "Rean-Musique"
+    "Annivesaire-Bertrand",
+    "Anniversaire-Christine"
   ],
   "photos": []
 }

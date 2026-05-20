@@ -69,8 +69,24 @@ async function traiterDossier(dossierPath, contentPath, niveau = 0) {
   const nomDossier = path.basename(dossierPath);
   console.log(`${indent}📁 ${nomDossier} (${photos.length} photos, ${sousDossiers.length} sous-dossiers)`);
 
-  // Lire les métadonnées depuis sources/ (source de vérité)
-  const sourceMeta = await lireJson(path.join(dossierPath, '_index.json'));
+  // Lire les métadonnées depuis sources/ (source de vérité) et le contenu existant
+  let sourceMeta = await lireJson(path.join(dossierPath, '_index.json'));
+  const existingContentMeta = await lireJson(path.join(contentPath, '_index.json'));
+
+  if (sourceMeta === null) {
+    const titreDeduit = nomDossier.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+    sourceMeta = {
+      titre: titreDeduit,
+      "_aide_description": "Pour un saut de ligne, utilisez \\n entre les phrases",
+      description: "",
+      couverture: "",
+      "_aide_categories": "Valeurs possibles : admin, famille-proche, famille-eloignee, jargeva, cabasson, public",
+      categories: ["admin"],
+      videos: [{ "_commentaire": "Supprimer cette ligne et remplir youtubeId avec l'ID de la vidéo YouTube", "titre": "Titre de la vidéo", "youtubeId": "", "type": "normal" }],
+    };
+    await writeFile(path.join(dossierPath, '_index.json'), JSON.stringify(sourceMeta, null, 2));
+    console.log(`${indent}  📝 _index.json créé dans sources/ !`);
+  }
 
   const photosData = [];
   for (const photo of photos) {
@@ -138,9 +154,13 @@ async function traiterDossier(dossierPath, contentPath, niveau = 0) {
     couverture,
     "_aide_categories": "Valeurs possibles : admin, famille-proche, famille-eloignee, jargeva, cabasson, public",
     categories: sourceMeta?.categories || ['admin'],
-    videos: sourceMeta !== null
-      ? (sourceMeta.videos || [])
-      : [{ "_commentaire": "Supprimer cette ligne et remplir youtubeId avec l'ID de la vidéo YouTube", "titre": "Titre de la vidéo", "youtubeId": "", "type": "normal" }],
+    videos: (() => {
+      const aVraiesVideos = (vids) => Array.isArray(vids) && vids.some(v => v.youtubeId);
+      if (aVraiesVideos(sourceMeta?.videos)) return sourceMeta.videos;
+      if (aVraiesVideos(existingContentMeta?.videos)) return existingContentMeta.videos;
+      if (sourceMeta !== null) return sourceMeta.videos || [];
+      return [{ "_commentaire": "Supprimer cette ligne et remplir youtubeId avec l'ID de la vidéo YouTube", "titre": "Titre de la vidéo", "youtubeId": "", "type": "normal" }];
+    })(),
     sousEvenements: sousEvenementsFusionnes,
     photos: photosData,
   };

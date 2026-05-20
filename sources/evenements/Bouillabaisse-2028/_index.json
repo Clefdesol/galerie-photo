@@ -1,10 +1,8 @@
 {
-  "titre": "Charly",
-  "type": "evenement",
-  "date": "2026-05-20",
+  "titre": "Bouillabaisse 2028",
   "_aide_description": "Pour un saut de ligne, utilisez \\n entre les phrases",
   "description": "",
-  "couverture": "Vignette-Charly-opt.jpg",
+  "couverture": "",
   "_aide_categories": "Valeurs possibles : admin, famille-proche, famille-eloignee, jargeva, cabasson, public",
   "categories": [
     "admin"
@@ -15,15 +13,6 @@
       "titre": "Titre de la vidéo",
       "youtubeId": "",
       "type": "normal"
-    }
-  ],
-  "sousEvenements": [],
-  "photos": [
-    {
-      "fichier": "Vignette-Charly-opt.jpg",
-      "titre": "Vignette-Charly",
-      "tags": [],
-      "date": null
     }
   ]
 }

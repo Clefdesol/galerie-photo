@@ -1,0 +1,18 @@
+{
+  "titre": "60 Ans De Christine ",
+  "_aide_description": "Pour un saut de ligne, utilisez \\n entre les phrases",
+  "description": "",
+  "couverture": "",
+  "_aide_categories": "Valeurs possibles : admin, famille-proche, famille-eloignee, jargeva, cabasson, public",
+  "categories": [
+    "admin"
+  ],
+  "videos": [
+    {
+      "_commentaire": "Le film du Jargeva pour les 60 ans de Christine",
+      "titre": "60 ans de Christine",
+      "youtubeId": "PrPFW0op0Tc",
+      "type": "normal"
+    }
+  ]
+}
