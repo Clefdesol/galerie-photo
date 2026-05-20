@@ -1,0 +1,165 @@
+{
+  "titre": "Nouvel An 2025",
+  "type": "evenement",
+  "date": "2025-01-03",
+  "_aide_description": "Pour un saut de ligne, utilisez \\n entre les phrases",
+  "description": "",
+  "couverture": "1-IMG_8846-opt.jpg",
+  "_aide_categories": "Valeurs possibles : admin, famille-proche, famille-eloignee, jargeva, cabasson, public",
+  "categories": [
+    "admin"
+  ],
+  "videos": [
+    {
+      "_commentaire": "Supprimer cette ligne et remplir youtubeId avec l'ID de la vidéo YouTube",
+      "titre": "Titre de la vidéo",
+      "youtubeId": "",
+      "type": "normal"
+    }
+  ],
+  "sousEvenements": [],
+  "photos": [
+    {
+      "fichier": "1-IMG_8846-opt.jpg",
+      "titre": "1-IMG_8846",
+      "tags": [
+        "Liddes",
+        "Lieu:",
+        "Valais"
+      ],
+      "date": "2025-01-03T13:43:51.000Z"
+    },
+    {
+      "fichier": "2-IMG_8821-opt.jpg",
+      "titre": "2-IMG_8821",
+      "tags": [
+        "Liddes",
+        "Lieu:",
+        "Valais"
+      ],
+      "date": "2025-01-02T12:04:26.000Z"
+    },
+    {
+      "fichier": "3-IMG_8835-opt.jpg",
+      "titre": "3-IMG_8835",
+      "tags": [
+        "Isabelle",
+        "Jean-Pierre",
+        "Liddes",
+        "Lieu:",
+        "Valais"
+      ],
+      "date": "2025-01-02T12:29:46.000Z"
+    },
+    {
+      "fichier": "4-32842795-6502-4a07-bd77-bb064eb77d5a-opt.jpg",
+      "titre": "4-32842795-6502-4a07-bd77-bb064eb77d5a",
+      "tags": [
+        "Liddes",
+        "Lieu:",
+        "Valais"
+      ],
+      "date": null
+    },
+    {
+      "fichier": "5-IMG_8796-opt.jpg",
+      "titre": "5-IMG_8796",
+      "tags": [
+        "Isabelle",
+        "Jean-Pierre",
+        "Liddes",
+        "Lieu:",
+        "Léo",
+        "Valais"
+      ],
+      "date": "2025-01-01T10:47:22.000Z"
+    },
+    {
+      "fichier": "6-IMG_8817-opt.jpg",
+      "titre": "6-IMG_8817",
+      "tags": [
+        "Liddes",
+        "Lieu:",
+        "Valais"
+      ],
+      "date": "2025-01-02T10:54:08.000Z"
+    },
+    {
+      "fichier": "7-IMG_8767-opt.jpg",
+      "titre": "7-IMG_8767",
+      "tags": [
+        "Isabelle",
+        "Jean-Pierre",
+        "Liddes",
+        "Lieu:",
+        "Léo",
+        "Valais"
+      ],
+      "date": "2024-12-31T23:05:55.000Z"
+    },
+    {
+      "fichier": "8-IMG_8863-opt.jpg",
+      "titre": "8-IMG_8863",
+      "tags": [
+        "Clélia",
+        "Liddes",
+        "Lieu:",
+        "Valais"
+      ],
+      "date": "2025-01-04T15:16:05.000Z"
+    },
+    {
+      "fichier": "9-4848f195-5bd3-4a6c-932d-cea64b3761ec-opt.jpg",
+      "titre": "9-4848f195-5bd3-4a6c-932d-cea64b3761ec",
+      "tags": [
+        "Liddes",
+        "Lieu:",
+        "Valais"
+      ],
+      "date": null
+    },
+    {
+      "fichier": "10-IMG_8763-opt.jpg",
+      "titre": "10-IMG_8763",
+      "tags": [
+        "Isabelle",
+        "Jean-Pierre",
+        "Liddes",
+        "Lieu:",
+        "Léo",
+        "Valais"
+      ],
+      "date": "2024-12-31T23:05:22.000Z"
+    },
+    {
+      "fichier": "11-IMG_8849-opt.jpg",
+      "titre": "11-IMG_8849",
+      "tags": [
+        "Liddes",
+        "Lieu:",
+        "Valais"
+      ],
+      "date": "2025-01-03T16:20:55.000Z"
+    },
+    {
+      "fichier": "12-IMG_8850-opt.jpg",
+      "titre": "12-IMG_8850",
+      "tags": [
+        "Liddes",
+        "Lieu:",
+        "Valais"
+      ],
+      "date": "2025-01-03T16:30:10.000Z"
+    },
+    {
+      "fichier": "13-c306c624-7cd7-41d6-ab44-f572290ede5c-opt.jpg",
+      "titre": "13-c306c624-7cd7-41d6-ab44-f572290ede5c",
+      "tags": [
+        "Liddes",
+        "Lieu:",
+        "Valais"
+      ],
+      "date": null
+    }
+  ]
+}

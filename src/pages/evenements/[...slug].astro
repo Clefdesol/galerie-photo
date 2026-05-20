@@ -1,26 +1,18 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import { readdir, readFile, stat } from 'fs/promises';
+import { readFile } from 'fs/promises';
 import path from 'path';
 
 export async function getStaticPaths() {
-  const CONTENT_DIR = path.join(process.cwd(), 'src/content/evenements');
-  const chemins = [];
-
-  async function parcourir(dir, slugParts = []) {
-    const entries = (await readdir(dir)).filter(d => !d.startsWith('.'));
-    for (const entry of entries) {
-      const fullPath = path.join(dir, entry);
-      const s = await stat(fullPath);
-      if (!s.isDirectory()) continue;
-      const newSlugParts = [...slugParts, entry];
-      chemins.push({ params: { slug: newSlugParts.join('/') } });
-      await parcourir(fullPath, newSlugParts);
-    }
-  }
-
-  await parcourir(CONTENT_DIR);
-  return chemins;
+  // import.meta.glob crée une dépendance Vite : tout nouveau _index.json
+  // déclenche automatiquement une réévaluation sans redémarrer le serveur.
+  const jsons = import.meta.glob('/src/content/evenements/**/_index.json');
+  return Object.keys(jsons).map(filePath => {
+    const slug = filePath
+      .replace('/src/content/evenements/', '')
+      .replace('/_index.json', '');
+    return { params: { slug } };
+  });
 }
 
 const CONTENT_DIR = path.join(process.cwd(), 'src/content/evenements');

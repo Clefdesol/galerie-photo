@@ -138,7 +138,9 @@ async function traiterDossier(dossierPath, contentPath, niveau = 0) {
     couverture,
     "_aide_categories": "Valeurs possibles : admin, famille-proche, famille-eloignee, jargeva, cabasson, public",
     categories: sourceMeta?.categories || ['admin'],
-    videos: sourceMeta?.videos || [],
+    videos: sourceMeta !== null
+      ? (sourceMeta.videos || [])
+      : [{ "_commentaire": "Supprimer cette ligne et remplir youtubeId avec l'ID de la vidéo YouTube", "titre": "Titre de la vidéo", "youtubeId": "", "type": "normal" }],
     sousEvenements: sousEvenementsFusionnes,
     photos: photosData,
   };

@@ -1,0 +1,167 @@
+{
+  "titre": "Plage De Cabasson",
+  "type": "evenement",
+  "date": "2025-07-29",
+  "_aide_description": "Pour un saut de ligne, utilisez \\n entre les phrases",
+  "description": "",
+  "couverture": "1-IMG_3119-opt.jpg",
+  "_aide_categories": "Valeurs possibles : admin, famille-proche, famille-eloignee, jargeva, cabasson, public",
+  "categories": [
+    "admin"
+  ],
+  "videos": [
+    {
+      "_commentaire": "Supprimer cette ligne et remplir youtubeId avec l'ID de la vidéo YouTube",
+      "titre": "Titre de la vidéo",
+      "youtubeId": "",
+      "type": "normal"
+    }
+  ],
+  "sousEvenements": [],
+  "photos": [
+    {
+      "fichier": "1-IMG_3119-opt.jpg",
+      "titre": "1-IMG_3119",
+      "tags": [
+        "Activités",
+        "Cabasson",
+        "Lieu:",
+        "Plage",
+        "Provence"
+      ],
+      "date": "2025-07-29T09:47:40.000Z"
+    },
+    {
+      "fichier": "2-IMG_3143-opt.jpg",
+      "titre": "2-IMG_3143",
+      "tags": [
+        "Activités",
+        "Cabasson",
+        "Lieu:",
+        "Plage",
+        "Provence"
+      ],
+      "date": "2025-07-29T09:49:08.000Z"
+    },
+    {
+      "fichier": "3-IMG_3155-opt.jpg",
+      "titre": "3-IMG_3155",
+      "tags": [
+        "Activités",
+        "Cabasson",
+        "Lieu:",
+        "Plage",
+        "Provence"
+      ],
+      "date": "2025-07-29T09:49:53.000Z"
+    },
+    {
+      "fichier": "4-IMG_3166-opt.jpg",
+      "titre": "4-IMG_3166",
+      "tags": [
+        "Activités",
+        "Cabasson",
+        "Lieu:",
+        "Plage",
+        "Provence"
+      ],
+      "date": "2025-07-29T09:50:45.000Z"
+    },
+    {
+      "fichier": "5-IMG_3193-opt.jpg",
+      "titre": "5-IMG_3193",
+      "tags": [
+        "Activités",
+        "Cabasson",
+        "Lieu:",
+        "Plage",
+        "Provence"
+      ],
+      "date": "2025-07-29T09:52:50.000Z"
+    },
+    {
+      "fichier": "6-IMG_3213-opt.jpg",
+      "titre": "6-IMG_3213",
+      "tags": [
+        "Activités",
+        "Cabasson",
+        "Lieu:",
+        "Plage",
+        "Provence"
+      ],
+      "date": "2025-07-29T09:55:12.000Z"
+    },
+    {
+      "fichier": "7-IMG_3214-opt.jpg",
+      "titre": "7-IMG_3214",
+      "tags": [
+        "Activités",
+        "Cabasson",
+        "Lieu:",
+        "Plage",
+        "Provence"
+      ],
+      "date": "2025-07-29T09:55:29.000Z"
+    },
+    {
+      "fichier": "8-IMG_3252-opt.jpg",
+      "titre": "8-IMG_3252",
+      "tags": [
+        "Activités",
+        "Cabasson",
+        "Lieu:",
+        "Plage",
+        "Provence"
+      ],
+      "date": "2025-07-29T10:02:00.000Z"
+    },
+    {
+      "fichier": "9-IMG_3607-opt.jpg",
+      "titre": "9-IMG_3607",
+      "tags": [
+        "Activités",
+        "Cabasson",
+        "Lieu:",
+        "Plage",
+        "Provence"
+      ],
+      "date": "2025-08-04T09:37:35.000Z"
+    },
+    {
+      "fichier": "10-IMG_3258-opt.jpg",
+      "titre": "10-IMG_3258",
+      "tags": [
+        "Activités",
+        "Cabasson",
+        "Lieu:",
+        "Plage",
+        "Provence"
+      ],
+      "date": "2025-07-29T10:07:43.000Z"
+    },
+    {
+      "fichier": "11-IMG_3260-opt.jpg",
+      "titre": "11-IMG_3260",
+      "tags": [
+        "Activités",
+        "Cabasson",
+        "Lieu:",
+        "Plage",
+        "Provence"
+      ],
+      "date": "2025-07-29T10:07:57.000Z"
+    },
+    {
+      "fichier": "12-IMG_8700-opt.jpg",
+      "titre": "12-IMG_8700",
+      "tags": [
+        "Activités",
+        "Cabasson",
+        "Lieu:",
+        "Plage",
+        "Provence"
+      ],
+      "date": "2025-07-30T09:25:17.000Z"
+    }
+  ]
+}

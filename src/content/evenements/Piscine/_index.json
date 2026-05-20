@@ -1,0 +1,374 @@
+{
+  "titre": "Piscine",
+  "type": "evenement",
+  "date": "2025-03-30",
+  "_aide_description": "Pour un saut de ligne, utilisez \\n entre les phrases",
+  "description": "",
+  "couverture": "1-IMG_0081-opt.jpg",
+  "_aide_categories": "Valeurs possibles : admin, famille-proche, famille-eloignee, jargeva, cabasson, public",
+  "categories": [
+    "admin"
+  ],
+  "videos": [
+    {
+      "_commentaire": "Supprimer cette ligne et remplir youtubeId avec l'ID de la vidéo YouTube",
+      "titre": "Titre de la vidéo",
+      "youtubeId": "",
+      "type": "normal"
+    }
+  ],
+  "sousEvenements": [],
+  "photos": [
+    {
+      "fichier": "1-IMG_0081-opt.jpg",
+      "titre": "1-IMG_0081",
+      "tags": [
+        "Activités",
+        "Bain",
+        "Canton Genève et environs",
+        "Drize",
+        "Lieu:",
+        "Piscine",
+        "Rean"
+      ],
+      "date": "2025-03-30T14:47:43.000Z"
+    },
+    {
+      "fichier": "2-IMG_0110-opt.jpg",
+      "titre": "2-IMG_0110",
+      "tags": [
+        "Activités",
+        "Bain",
+        "Canton Genève et environs",
+        "Clélia",
+        "Drize",
+        "Lieu:",
+        "Piscine",
+        "Rean"
+      ],
+      "date": "2025-03-30T14:52:58.000Z"
+    },
+    {
+      "fichier": "3-IMG_0778-opt.jpg",
+      "titre": "3-IMG_0778",
+      "tags": [
+        "Activités",
+        "Canton Genève et environs",
+        "Drize",
+        "Isabelle",
+        "Lieu:",
+        "Piscine"
+      ],
+      "date": "2025-05-02T13:35:47.000Z"
+    },
+    {
+      "fichier": "4-IMG_0892-opt.jpg",
+      "titre": "4-IMG_0892",
+      "tags": [
+        "Activités",
+        "Canton Genève et environs",
+        "Drize",
+        "Lieu:",
+        "Piscine",
+        "Rean"
+      ],
+      "date": "2025-05-18T15:22:22.000Z"
+    },
+    {
+      "fichier": "5-IMG_1489-opt.jpg",
+      "titre": "5-IMG_1489",
+      "tags": [
+        "Activités",
+        "Canton Genève et environs",
+        "Drize",
+        "Lieu:",
+        "Louis",
+        "Piscine"
+      ],
+      "date": "2025-06-13T16:29:00.000Z"
+    },
+    {
+      "fichier": "6-IMG_1494-opt.jpg",
+      "titre": "6-IMG_1494",
+      "tags": [
+        "Activités",
+        "Canton Genève et environs",
+        "Drize",
+        "Lieu:",
+        "Piscine",
+        "Théo"
+      ],
+      "date": "2025-06-13T16:29:48.000Z"
+    },
+    {
+      "fichier": "7-IMG_1618-opt.jpg",
+      "titre": "7-IMG_1618",
+      "tags": [
+        "Activités",
+        "Canton Genève et environs",
+        "Drize",
+        "Lieu:",
+        "Piscine",
+        "Rean",
+        "Sara"
+      ],
+      "date": "2025-06-14T14:05:48.000Z"
+    },
+    {
+      "fichier": "8-IMG_1691-opt.jpg",
+      "titre": "8-IMG_1691",
+      "tags": [
+        "Activités",
+        "Canton Genève et environs",
+        "Drize",
+        "Eva",
+        "Lieu:",
+        "Personages:",
+        "Piscine",
+        "Visages"
+      ],
+      "date": "2025-06-16T15:34:37.000Z"
+    },
+    {
+      "fichier": "9-IMG_1848-opt.jpg",
+      "titre": "9-IMG_1848",
+      "tags": [
+        "Activités",
+        "Canton Genève et environs",
+        "Drize",
+        "Lieu:",
+        "Piscine",
+        "Rean"
+      ],
+      "date": "2025-06-21T18:45:08.000Z"
+    },
+    {
+      "fichier": "10-IMG_1915-opt.jpg",
+      "titre": "10-IMG_1915",
+      "tags": [
+        "Activités",
+        "Canton Genève et environs",
+        "Drize",
+        "Lieu:",
+        "Piscine",
+        "Zacharie"
+      ],
+      "date": "2025-06-22T14:17:56.000Z"
+    },
+    {
+      "fichier": "11-IMG_1924-opt.jpg",
+      "titre": "11-IMG_1924",
+      "tags": [
+        "Activités",
+        "Canton Genève et environs",
+        "Clélia",
+        "Drize",
+        "Eva",
+        "Lieu:",
+        "Personages:",
+        "Piscine",
+        "Visages"
+      ],
+      "date": "2025-06-22T14:24:38.000Z"
+    },
+    {
+      "fichier": "12-IMG_1971-opt.jpg",
+      "titre": "12-IMG_1971",
+      "tags": [
+        "Activités",
+        "Canton Genève et environs",
+        "Drize",
+        "Lieu:",
+        "Léo",
+        "Piscine"
+      ],
+      "date": "2025-06-24T15:44:22.000Z"
+    },
+    {
+      "fichier": "13-IMG_2254-opt.jpg",
+      "titre": "13-IMG_2254",
+      "tags": [
+        "Activités",
+        "Canton Genève et environs",
+        "Drize",
+        "Lieu:",
+        "Piscine"
+      ],
+      "date": "2025-07-05T16:18:25.000Z"
+    },
+    {
+      "fichier": "14-IMG_1938-opt.jpg",
+      "titre": "14-IMG_1938",
+      "tags": [
+        "Activités",
+        "Canton Genève et environs",
+        "Clélia",
+        "Drize",
+        "Lieu:",
+        "Piscine"
+      ],
+      "date": "2025-06-23T18:35:02.000Z"
+    },
+    {
+      "fichier": "15-IMG_2639-opt.jpg",
+      "titre": "15-IMG_2639",
+      "tags": [
+        "Activités",
+        "Canton Genève et environs",
+        "Drize",
+        "Lieu:",
+        "Mattia",
+        "Piscine"
+      ],
+      "date": "2025-07-15T14:14:55.000Z"
+    },
+    {
+      "fichier": "16-IMG_2656-opt.jpg",
+      "titre": "16-IMG_2656",
+      "tags": [
+        "Activités",
+        "Canton Genève et environs",
+        "Drize",
+        "Jean-Pierre",
+        "Lieu:",
+        "Mattia",
+        "Piscine"
+      ],
+      "date": "2025-07-15T14:28:08.000Z"
+    },
+    {
+      "fichier": "17-IMG_2685-opt.jpg",
+      "titre": "17-IMG_2685",
+      "tags": [
+        "Activités",
+        "Canton Genève et environs",
+        "Drize",
+        "Eva",
+        "Lieu:",
+        "Mattia",
+        "Personages:",
+        "Piscine",
+        "Visages"
+      ],
+      "date": "2025-07-15T15:04:51.000Z"
+    },
+    {
+      "fichier": "18-IMG_3982-opt.jpg",
+      "titre": "18-IMG_3982",
+      "tags": [
+        "Activités",
+        "Canton Genève et environs",
+        "Drize",
+        "Lieu:",
+        "Piscine",
+        "Roseline",
+        "Zacharie"
+      ],
+      "date": "2025-08-15T14:27:18.000Z"
+    },
+    {
+      "fichier": "19-IMG_4008-opt.jpg",
+      "titre": "19-IMG_4008",
+      "tags": [
+        "Activités",
+        "Canton Genève et environs",
+        "Drize",
+        "Eva",
+        "Lieu:",
+        "Personages:",
+        "Piscine",
+        "Roseline",
+        "Visages",
+        "Zacharie"
+      ],
+      "date": "2025-08-15T15:04:27.000Z"
+    },
+    {
+      "fichier": "20-IMG_4044-opt.jpg",
+      "titre": "20-IMG_4044",
+      "tags": [
+        "Activités",
+        "Canton Genève et environs",
+        "Cencin Famille",
+        "Drize",
+        "Lieu:",
+        "Nello",
+        "Personages:",
+        "Piscine"
+      ],
+      "date": "2025-08-17T14:40:19.000Z"
+    },
+    {
+      "fichier": "21-IMG_4047-opt.jpg",
+      "titre": "21-IMG_4047",
+      "tags": [
+        "Activités",
+        "Alma",
+        "Canton Genève et environs",
+        "Cencin Famille",
+        "Drize",
+        "Lieu:",
+        "Lucas",
+        "Mattia",
+        "Personages:",
+        "Piscine",
+        "Yves",
+        "g"
+      ],
+      "date": "2025-08-17T14:41:15.000Z"
+    },
+    {
+      "fichier": "22-IMG_2280-opt.jpg",
+      "titre": "22-IMG_2280",
+      "tags": [
+        "Activités",
+        "Canton Genève et environs",
+        "Cencin Famille",
+        "Drize",
+        "Lieu:",
+        "Ozalée",
+        "Personages:",
+        "Piscine"
+      ],
+      "date": "2025-07-06T13:22:49.000Z"
+    },
+    {
+      "fichier": "23-IMG_4293-opt.jpg",
+      "titre": "23-IMG_4293",
+      "tags": [
+        "Activités",
+        "Canton Genève et environs",
+        "Drize",
+        "Lieu:",
+        "Piscine",
+        "Rean"
+      ],
+      "date": "2025-09-07T14:01:06.000Z"
+    },
+    {
+      "fichier": "24-IMG_5235-opt.jpg",
+      "titre": "24-IMG_5235",
+      "tags": [
+        "Activités",
+        "Anita",
+        "Canton Genève et environs",
+        "Drize",
+        "Lieu:",
+        "Piscine"
+      ],
+      "date": "2025-10-29T12:24:31.000Z"
+    },
+    {
+      "fichier": "25-c45605ae-fc67-4c52-ac2f-9511731bab9d-opt.jpg",
+      "titre": "25-c45605ae-fc67-4c52-ac2f-9511731bab9d",
+      "tags": [
+        "Activités",
+        "Canton Genève et environs",
+        "Drize",
+        "Lieu:",
+        "Piscine"
+      ],
+      "date": null
+    }
+  ]
+}

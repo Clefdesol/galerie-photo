@@ -1,0 +1,246 @@
+{
+  "titre": "Chassagne 2010",
+  "type": "evenement",
+  "date": "2002-02-21",
+  "_aide_description": "Pour un saut de ligne, utilisez \\n entre les phrases",
+  "description": "",
+  "couverture": "1-G44imf1000035-opt.jpg",
+  "_aide_categories": "Valeurs possibles : admin, famille-proche, famille-eloignee, jargeva, cabasson, public",
+  "categories": [
+    "admin"
+  ],
+  "videos": [
+    {
+      "_commentaire": "Supprimer cette ligne et remplir youtubeId avec l'ID de la vidéo YouTube",
+      "titre": "Titre de la vidéo",
+      "youtubeId": "",
+      "type": "normal"
+    }
+  ],
+  "sousEvenements": [],
+  "photos": [
+    {
+      "fichier": "1-G44imf1000035-opt.jpg",
+      "titre": "1-G44imf1000035",
+      "tags": [
+        "Chassagne",
+        "Lieu:"
+      ],
+      "date": "2002-02-21T11:51:04.000Z"
+    },
+    {
+      "fichier": "2-G44imf1000021-opt.jpg",
+      "titre": "2-G44imf1000021",
+      "tags": [
+        "Animaux",
+        "Chassagne",
+        "Chien",
+        "Lieu:"
+      ],
+      "date": "2002-02-21T11:51:38.000Z"
+    },
+    {
+      "fichier": "3-G44imf1000016-opt.jpg",
+      "titre": "3-G44imf1000016",
+      "tags": [
+        "Ane",
+        "Animaux",
+        "Annen Cencin",
+        "Chassagne",
+        "Lieu:",
+        "Lucas",
+        "Personages:"
+      ],
+      "date": "2002-02-21T11:52:36.000Z"
+    },
+    {
+      "fichier": "4-G47imf1030028-opt.jpg",
+      "titre": "4-G47imf1030028",
+      "tags": [
+        "Chassagne",
+        "Lieu:"
+      ],
+      "date": "2002-02-21T11:58:37.000Z"
+    },
+    {
+      "fichier": "5-Elegance-opt.jpg",
+      "titre": "5-Elegance",
+      "tags": [
+        "Animaux",
+        "Chassagne",
+        "Lieu:",
+        "Poule Coq"
+      ],
+      "date": "2002-02-21T11:59:36.000Z"
+    },
+    {
+      "fichier": "6-Ropmuald en couches-opt.jpg",
+      "titre": "6-Ropmuald en couches",
+      "tags": [
+        "Chassagne",
+        "Lieu:"
+      ],
+      "date": "2003-02-26T11:04:00.000Z"
+    },
+    {
+      "fichier": "7-F1010026_1-opt.jpg",
+      "titre": "7-F1010026_1",
+      "tags": [
+        "Chassagne",
+        "Lieu:"
+      ],
+      "date": "2003-02-26T11:19:07.000Z"
+    },
+    {
+      "fichier": "8-Gilm82 f1020001_1-opt.jpg",
+      "titre": "8-Gilm82 f1020001_1",
+      "tags": [
+        "Chassagne",
+        "Lieu:"
+      ],
+      "date": "2003-02-26T11:20:50.000Z"
+    },
+    {
+      "fichier": "9-F1020022_1-opt.jpg",
+      "titre": "9-F1020022_1",
+      "tags": [
+        "Chassagne",
+        "Lieu:"
+      ],
+      "date": "2003-02-26T11:21:49.000Z"
+    },
+    {
+      "fichier": "10-Gilm84 f1000009_2-opt.jpg",
+      "titre": "10-Gilm84 f1000009_2",
+      "tags": [
+        "Chassagne",
+        "Lieu:"
+      ],
+      "date": "2003-02-26T11:33:29.000Z"
+    },
+    {
+      "fichier": "11-Gilm85 f1010023_2-opt.jpg",
+      "titre": "11-Gilm85 f1010023_2",
+      "tags": [
+        "Chassagne",
+        "Lieu:"
+      ],
+      "date": "2003-02-26T11:37:27.000Z"
+    },
+    {
+      "fichier": "12-F1030012_2-opt.jpg",
+      "titre": "12-F1030012_2",
+      "tags": [
+        "Chassagne",
+        "Lieu:"
+      ],
+      "date": "2003-02-26T11:43:49.000Z"
+    },
+    {
+      "fichier": "13-G46imf1020031-opt.jpg",
+      "titre": "13-G46imf1020031",
+      "tags": [
+        "Chassagne",
+        "Lieu:"
+      ],
+      "date": "2004-10-17T20:23:43.000Z"
+    },
+    {
+      "fichier": "14-Vac Pâques 05 best - 064-opt.jpg",
+      "titre": "14-Vac Pâques 05 best - 064",
+      "tags": [
+        "Chassagne",
+        "Lieu:",
+        "Provence",
+        "Vacances"
+      ],
+      "date": "2005-04-01T11:17:37.000Z"
+    },
+    {
+      "fichier": "15-Vac Pâques 05 best - 079-opt.jpg",
+      "titre": "15-Vac Pâques 05 best - 079",
+      "tags": [
+        "Chassagne",
+        "Lieu:",
+        "Provence",
+        "Vacances"
+      ],
+      "date": "2005-04-01T14:23:03.000Z"
+    },
+    {
+      "fichier": "16-DSC_5111-opt.jpg",
+      "titre": "16-DSC_5111",
+      "tags": [
+        "Chassagne",
+        "Lieu:"
+      ],
+      "date": "2007-10-23T12:36:50.000Z"
+    },
+    {
+      "fichier": "17-DSC_5137-opt.jpg",
+      "titre": "17-DSC_5137",
+      "tags": [
+        "Chassagne",
+        "Lieu:"
+      ],
+      "date": "2007-10-23T12:51:48.000Z"
+    },
+    {
+      "fichier": "18-DSC_5233-opt.jpg",
+      "titre": "18-DSC_5233",
+      "tags": [
+        "Chassagne",
+        "Lieu:"
+      ],
+      "date": "2007-10-23T14:31:16.000Z"
+    },
+    {
+      "fichier": "19-DSC_5417-opt.jpg",
+      "titre": "19-DSC_5417",
+      "tags": [
+        "Chassagne",
+        "Lieu:"
+      ],
+      "date": "2007-10-25T09:04:44.000Z"
+    },
+    {
+      "fichier": "20-DSC_5436-opt.jpg",
+      "titre": "20-DSC_5436",
+      "tags": [
+        "Annen Cencin",
+        "Chassagne",
+        "Lieu:",
+        "Léo",
+        "Personages:"
+      ],
+      "date": "2007-10-25T09:07:08.000Z"
+    },
+    {
+      "fichier": "21-P1000821-opt.jpg",
+      "titre": "21-P1000821",
+      "tags": [
+        "Chassagne",
+        "Lieu:"
+      ],
+      "date": "2010-05-22T10:21:01.000Z"
+    },
+    {
+      "fichier": "22-P1000842-opt.jpg",
+      "titre": "22-P1000842",
+      "tags": [
+        "Chassagne",
+        "Lieu:"
+      ],
+      "date": "2010-05-22T11:32:46.000Z"
+    },
+    {
+      "fichier": "23-P1000930-opt.jpg",
+      "titre": "23-P1000930",
+      "tags": [
+        "Chassagne",
+        "Lieu:"
+      ],
+      "date": "2010-05-22T15:30:07.000Z"
+    }
+  ]
+}

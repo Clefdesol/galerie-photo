@@ -1,0 +1,142 @@
+{
+  "titre": "Bouillabaisse 2028",
+  "type": "evenement",
+  "date": "2018-09-22",
+  "_aide_description": "Pour un saut de ligne, utilisez \\n entre les phrases",
+  "description": "",
+  "couverture": "1-_DSC4954-opt.jpg",
+  "_aide_categories": "Valeurs possibles : admin, famille-proche, famille-eloignee, jargeva, cabasson, public",
+  "categories": [
+    "admin"
+  ],
+  "videos": [
+    {
+      "_commentaire": "Supprimer cette ligne et remplir youtubeId avec l'ID de la vidéo YouTube",
+      "titre": "Titre de la vidéo",
+      "youtubeId": "",
+      "type": "normal"
+    }
+  ],
+  "sousEvenements": [],
+  "photos": [
+    {
+      "fichier": "1-_DSC4954-opt.jpg",
+      "titre": "1-_DSC4954",
+      "tags": [
+        "Boullabaisse",
+        "Canton Genève et environs",
+        "Drize",
+        "Lieu:"
+      ],
+      "date": "2018-09-22T14:02:42.000Z"
+    },
+    {
+      "fichier": "2-_DSC4969-opt.jpg",
+      "titre": "2-_DSC4969",
+      "tags": [
+        "Boullabaisse",
+        "Canton Genève et environs",
+        "Drize",
+        "Lieu:",
+        "Léo"
+      ],
+      "date": "2018-09-22T14:37:14.000Z"
+    },
+    {
+      "fichier": "3-_DSC4999-opt.jpg",
+      "titre": "3-_DSC4999",
+      "tags": [
+        "Boullabaisse",
+        "Canton Genève et environs",
+        "Drize",
+        "Lieu:"
+      ],
+      "date": "2018-09-22T16:20:42.000Z"
+    },
+    {
+      "fichier": "4-IMG_0090-opt.jpg",
+      "titre": "4-IMG_0090",
+      "tags": [],
+      "date": "2018-09-22T17:04:36.000Z"
+    },
+    {
+      "fichier": "5-IMG_0096-opt.jpg",
+      "titre": "5-IMG_0096",
+      "tags": [
+        "Gilles"
+      ],
+      "date": "2018-09-22T17:19:52.000Z"
+    },
+    {
+      "fichier": "6-_DSC5034-opt.jpg",
+      "titre": "6-_DSC5034",
+      "tags": [
+        "Boullabaisse",
+        "Canton Genève et environs",
+        "Drize",
+        "Lieu:"
+      ],
+      "date": "2018-09-22T17:56:44.000Z"
+    },
+    {
+      "fichier": "7-IMG_0108-opt.jpg",
+      "titre": "7-IMG_0108",
+      "tags": [],
+      "date": "2018-09-22T17:57:00.000Z"
+    },
+    {
+      "fichier": "8-IMG_0129-opt.jpg",
+      "titre": "8-IMG_0129",
+      "tags": [],
+      "date": "2018-09-22T18:00:53.000Z"
+    },
+    {
+      "fichier": "9-_DSC5059-opt.jpg",
+      "titre": "9-_DSC5059",
+      "tags": [
+        "Boullabaisse",
+        "Canton Genève et environs",
+        "Drize",
+        "Lieu:",
+        "Lucas"
+      ],
+      "date": "2018-09-22T18:15:40.000Z"
+    },
+    {
+      "fichier": "10-_DSC5082-opt.jpg",
+      "titre": "10-_DSC5082",
+      "tags": [
+        "Boullabaisse",
+        "Canton Genève et environs",
+        "Drize",
+        "Lieu:"
+      ],
+      "date": "2018-09-22T18:27:15.000Z"
+    },
+    {
+      "fichier": "11-_DSC5096-opt.jpg",
+      "titre": "11-_DSC5096",
+      "tags": [
+        "Boullabaisse",
+        "Canton Genève et environs",
+        "Drize",
+        "Lieu:"
+      ],
+      "date": "2018-09-22T18:31:49.000Z"
+    },
+    {
+      "fichier": "12-_DSC5119-opt.jpg",
+      "titre": "12-_DSC5119",
+      "tags": [
+        "Boullabaisse",
+        "Canton Genève et environs",
+        "Clélia",
+        "Drize",
+        "Gilles",
+        "Lieu:",
+        "Sara"
+      ],
+      "date": "2018-09-22T18:46:19.000Z"
+    }
+  ]
+}
