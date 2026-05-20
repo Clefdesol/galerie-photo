@@ -75,17 +75,33 @@ async function traiterDossier(dossierPath, contentPath, niveau = 0) {
 
   if (sourceMeta === null) {
     const titreDeduit = nomDossier.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+    const today = new Date().toISOString().split('T')[0];
     sourceMeta = {
       titre: titreDeduit,
+      type: "evenement",
+      date: today,
       "_aide_description": "Pour un saut de ligne, utilisez \\n entre les phrases",
       description: "",
       couverture: "",
       "_aide_categories": "Valeurs possibles : admin, famille-proche, famille-eloignee, jargeva, cabasson, public",
       categories: ["admin"],
       videos: [{ "_commentaire": "Supprimer cette ligne et remplir youtubeId avec l'ID de la vidéo YouTube", "titre": "Titre de la vidéo", "youtubeId": "", "type": "normal" }],
+      sousEvenements: [],
+      photos: [],
     };
     await writeFile(path.join(dossierPath, '_index.json'), JSON.stringify(sourceMeta, null, 2));
     console.log(`${indent}  📝 _index.json créé dans sources/ !`);
+  }
+
+  // Compléter les champs manquants sans écraser les valeurs existantes
+  const champsManquants = [];
+  if (!sourceMeta.type) { sourceMeta.type = 'evenement'; champsManquants.push('type'); }
+  if (!sourceMeta.date) { sourceMeta.date = new Date().toISOString().split('T')[0]; champsManquants.push('date'); }
+  if (!Array.isArray(sourceMeta.sousEvenements)) { sourceMeta.sousEvenements = []; champsManquants.push('sousEvenements'); }
+  if (!Array.isArray(sourceMeta.photos)) { sourceMeta.photos = []; champsManquants.push('photos'); }
+  if (champsManquants.length > 0) {
+    await writeFile(path.join(dossierPath, '_index.json'), JSON.stringify(sourceMeta, null, 2));
+    console.log(`${indent}  📝 _index.json complété dans sources/ (${champsManquants.join(', ')})`);
   }
 
   const photosData = [];

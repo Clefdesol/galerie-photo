@@ -1,5 +1,7 @@
 {
-  "titre": "Chassagne 2010",
+  "titre": "Dossier Sans Titre",
+  "type": "evenement",
+  "date": "2026-05-20",
   "_aide_description": "Pour un saut de ligne, utilisez \\n entre les phrases",
   "description": "",
   "couverture": "",
@@ -15,8 +17,6 @@
       "type": "normal"
     }
   ],
-  "type": "evenement",
-  "date": "2026-05-20",
   "sousEvenements": [],
   "photos": []
 }

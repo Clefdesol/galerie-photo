@@ -1,17 +1,18 @@
 {
-  "titre": "Chassagne 2010",
+  "titre": "Rapport D Activite 2027",
   "_aide_description": "Pour un saut de ligne, utilisez \\n entre les phrases",
   "description": "",
   "couverture": "",
   "_aide_categories": "Valeurs possibles : admin, famille-proche, famille-eloignee, jargeva, cabasson, public",
   "categories": [
-    "admin"
+    "admin",
+    "jargeva"
   ],
   "videos": [
     {
-      "_commentaire": "Supprimer cette ligne et remplir youtubeId avec l'ID de la vidéo YouTube",
-      "titre": "Titre de la vidéo",
-      "youtubeId": "",
+      "_commentaire": "SLe rapport d'activités 2017 du Jargeva",
+      "titre": "Rapport d'activités 2017",
+      "youtubeId": "bKVxs_a4tO0",
       "type": "normal"
     }
   ],
