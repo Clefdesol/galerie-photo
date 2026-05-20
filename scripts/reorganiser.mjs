@@ -4,6 +4,7 @@ import sharp from 'sharp';
 
 const SOURCES_DIR = './sources/evenements';
 const PUBLIC_DIR = './public/evenements';
+const CONTENT_DIR = './src/content/evenements';
 
 // Retourne tous les chemins de dossiers relatifs sous une racine (récursif)
 async function listerDossiers(racine, base = '') {
@@ -61,6 +62,23 @@ async function optimiserPhoto(sourceRel) {
   return true;
 }
 
+async function supprimerOrphelins(dossiersSources, racine, label) {
+  const dossiers = await listerDossiers(racine);
+  const aSupprimer = [...dossiers]
+    .filter(rel => !dossiersSources.has(rel))
+    .sort((a, b) => b.split('/').length - a.split('/').length);
+  let supprimes = 0;
+  for (const rel of aSupprimer) {
+    const fullPath = path.join(racine, rel);
+    const existe = await stat(fullPath).catch(() => null);
+    if (!existe) continue;
+    await rm(fullPath, { recursive: true, force: true });
+    console.log(`${label} - ${rel}`);
+    supprimes++;
+  }
+  return supprimes;
+}
+
 async function main() {
   const dossiersSources = await listerDossiers(SOURCES_DIR);
   const dossiersPublic = await listerDossiers(PUBLIC_DIR);
@@ -70,27 +88,15 @@ async function main() {
   for (const rel of dossiersSources) {
     if (!dossiersPublic.has(rel)) {
       await mkdir(path.join(PUBLIC_DIR, rel), { recursive: true });
-      console.log(`+ ${rel}`);
+      console.log(`public/ + ${rel}`);
       crees++;
     }
   }
 
-  // 2. Supprimer les dossiers qui n'existent plus dans sources/
-  // Traiter du plus profond au moins profond pour éviter les erreurs de suppression
-  const aSupprimer = [...dossiersPublic]
-    .filter(rel => !dossiersSources.has(rel))
-    .sort((a, b) => b.split('/').length - a.split('/').length);
-
-  let supprimes = 0;
-  for (const rel of aSupprimer) {
-    const fullPath = path.join(PUBLIC_DIR, rel);
-    // Vérifier que le dossier parent n'a pas déjà été supprimé
-    const existe = await stat(fullPath).catch(() => null);
-    if (!existe) continue;
-    await rm(fullPath, { recursive: true, force: true });
-    console.log(`- ${rel}`);
-    supprimes++;
-  }
+  // 2. Supprimer les dossiers orphelins de public/ et src/content/
+  const supprimesPublic = await supprimerOrphelins(dossiersSources, PUBLIC_DIR, 'public/');
+  const supprimesContent = await supprimerOrphelins(dossiersSources, CONTENT_DIR, 'content/');
+  const supprimes = supprimesPublic + supprimesContent;
 
   // 3. Optimiser les nouvelles photos
   let optimisees = 0;

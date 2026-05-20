@@ -12,7 +12,7 @@
     "astro": "astro",
     "import": "node scripts/import-lightroom.mjs",
     "reorg": "node scripts/reorganiser.mjs",
-    "deploy": "npm run import && npm run build"
+    "deploy": "npm run reorg && npm run import && npm run build"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.3.0",
