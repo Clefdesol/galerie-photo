@@ -1,0 +1,13 @@
+{
+  "titre": "Week End Anita",
+  "type": "evenement",
+  "date": "2026-06-23",
+  "_aide_description": "Pour un saut de ligne, utilisez \\n entre les phrases",
+  "description": "C'était une promesse : un week-end à la piscine",
+  "couverture": "1-IMG_1681-opt.jpg",
+  "_aide_categories": "Valeurs possibles : admin, famille-proche, famille-eloignee, jargeva, cabasson, public",
+  "categories": ["admin", "famille-proche"],
+  "videos": [],
+  "sousEvenements": [],
+  "photos": []
+}

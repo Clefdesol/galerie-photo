@@ -1,0 +1,194 @@
+{
+  "titre": "Week End Anita",
+  "type": "evenement",
+  "date": "2026-06-23",
+  "_aide_description": "Pour un saut de ligne, utilisez \\n entre les phrases",
+  "description": "C'était une promesse : un week-end à la piscine",
+  "couverture": "1-IMG_1681-opt.jpg",
+  "_aide_categories": "Valeurs possibles : admin, famille-proche, famille-eloignee, jargeva, cabasson, public",
+  "categories": [
+    "admin",
+    "famille-proche"
+  ],
+  "videos": [],
+  "sousEvenements": [],
+  "photos": [
+    {
+      "fichier": "1-IMG_1681-opt.jpg",
+      "titre": "1-IMG_1681",
+      "tags": [
+        "Activités",
+        "Anita",
+        "Canton Genève et environs",
+        "Drize",
+        "Enya",
+        "Isabelle",
+        "Lieu:",
+        "Léo",
+        "Piscine",
+        "ProjetParis",
+        "Projets:"
+      ],
+      "date": "2026-06-13T14:03:09.000Z"
+    },
+    {
+      "fichier": "2-IMG_1601-opt.jpg",
+      "titre": "2-IMG_1601",
+      "tags": [
+        "Clélia"
+      ],
+      "date": "2026-06-12T17:25:06.000Z"
+    },
+    {
+      "fichier": "3-IMG_1638-opt.jpg",
+      "titre": "3-IMG_1638",
+      "tags": [
+        "Activités",
+        "Anita",
+        "Canton Genève et environs",
+        "Drize",
+        "Eva",
+        "Lieu:",
+        "Personages:",
+        "Piscine",
+        "Visages"
+      ],
+      "date": "2026-06-13T10:25:23.000Z"
+    },
+    {
+      "fichier": "4-IMG_1621-opt.jpg",
+      "titre": "4-IMG_1621",
+      "tags": [
+        "Activités",
+        "Anita",
+        "Canton Genève et environs",
+        "Drize",
+        "Lieu:",
+        "Piscine",
+        "Tobogan"
+      ],
+      "date": "2026-06-13T08:27:10.000Z"
+    },
+    {
+      "fichier": "5-IMG_1622-opt.jpg",
+      "titre": "5-IMG_1622",
+      "tags": [
+        "Activités",
+        "Anita",
+        "Canton Genève et environs",
+        "Drize",
+        "Lieu:",
+        "Piscine",
+        "Tobogan"
+      ],
+      "date": "2026-06-13T08:27:18.000Z"
+    },
+    {
+      "fichier": "6-IMG_1624-opt.jpg",
+      "titre": "6-IMG_1624",
+      "tags": [
+        "Activités",
+        "Anita",
+        "Canton Genève et environs",
+        "Drize",
+        "Lieu:",
+        "Piscine",
+        "Tobogan"
+      ],
+      "date": "2026-06-13T08:27:19.000Z"
+    },
+    {
+      "fichier": "7-IMG_1625-opt.jpg",
+      "titre": "7-IMG_1625",
+      "tags": [
+        "Activités",
+        "Anita",
+        "Canton Genève et environs",
+        "Drize",
+        "Lieu:",
+        "Piscine",
+        "Tobogan"
+      ],
+      "date": "2026-06-13T08:27:19.000Z"
+    },
+    {
+      "fichier": "8-IMG_1619-opt.jpg",
+      "titre": "8-IMG_1619",
+      "tags": [
+        "Activités",
+        "Anita",
+        "Canton Genève et environs",
+        "Drize",
+        "Lieu:",
+        "Piscine",
+        "Tobogan"
+      ],
+      "date": "2026-06-13T08:23:37.000Z"
+    },
+    {
+      "fichier": "9-IMG_1692-opt.jpg",
+      "titre": "9-IMG_1692",
+      "tags": [
+        "Activités",
+        "Canton Genève et environs",
+        "Drize",
+        "Lieu:",
+        "Louise",
+        "Piscine"
+      ],
+      "date": "2026-06-13T14:13:22.000Z"
+    },
+    {
+      "fichier": "10-IMG_1711-opt.jpg",
+      "titre": "10-IMG_1711",
+      "tags": [
+        "Activités",
+        "Canton Genève et environs",
+        "Drize",
+        "Lieu:",
+        "Lili",
+        "Piscine"
+      ],
+      "date": "2026-06-14T11:18:58.000Z"
+    },
+    {
+      "fichier": "11-IMG_1715-opt.jpg",
+      "titre": "11-IMG_1715",
+      "tags": [
+        "Activités",
+        "Canton Genève et environs",
+        "Drize",
+        "Lieu:",
+        "Lili",
+        "Piscine"
+      ],
+      "date": "2026-06-14T11:19:12.000Z"
+    },
+    {
+      "fichier": "12-IMG_1715-opt.jpg",
+      "titre": "12-IMG_1715",
+      "tags": [
+        "Activités",
+        "Canton Genève et environs",
+        "Drize",
+        "Lieu:",
+        "Lili",
+        "Piscine"
+      ],
+      "date": "2026-06-14T11:19:12.000Z"
+    },
+    {
+      "fichier": "13-IMG_1706-opt.jpg",
+      "titre": "13-IMG_1706",
+      "tags": [
+        "Activités",
+        "Anita",
+        "Canton Genève et environs",
+        "Drize",
+        "Lieu:",
+        "Piscine"
+      ],
+      "date": "2026-06-14T08:48:30.000Z"
+    }
+  ]
+}

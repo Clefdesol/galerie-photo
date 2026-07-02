@@ -1,0 +1,288 @@
+{
+  "titre": "6 Les Cadeaux",
+  "type": "evenement",
+  "date": "2026-07-02",
+  "_aide_description": "Pour un saut de ligne, utilisez \\n entre les phrases",
+  "description": "",
+  "couverture": "1-IMG_6891-opt.jpg",
+  "_aide_categories": "Valeurs possibles : admin, famille-proche, famille-eloignee, jargeva, cabasson, public",
+  "categories": [
+    "admin"
+  ],
+  "videos": [
+    {
+      "_commentaire": "Supprimer cette ligne et remplir youtubeId avec l'ID de la vidéo YouTube",
+      "titre": "Titre de la vidéo",
+      "youtubeId": "",
+      "type": "normal"
+    }
+  ],
+  "sousEvenements": [],
+  "photos": [
+    {
+      "fichier": "1-IMG_6891-opt.jpg",
+      "titre": "1-IMG_6891",
+      "tags": [
+        "Annen",
+        "Canton Genève et environs",
+        "Drize",
+        "Famille Annen",
+        "Jeux",
+        "Lieu:",
+        "Lucas",
+        "Léo",
+        "Mattia",
+        "Personages:"
+      ],
+      "date": "2025-12-24T20:46:19.000Z"
+    },
+    {
+      "fichier": "2-IMG_6946-opt.jpg",
+      "titre": "2-IMG_6946",
+      "tags": [
+        "Annen",
+        "Canton Genève et environs",
+        "Drize",
+        "Famille Annen",
+        "Isabelle",
+        "Lieu:",
+        "Personages:"
+      ],
+      "date": "2025-12-24T20:53:37.000Z"
+    },
+    {
+      "fichier": "3-IMG_6961-opt.jpg",
+      "titre": "3-IMG_6961",
+      "tags": [
+        "Annen",
+        "Canton Genève et environs",
+        "Cencin Famille",
+        "Drize",
+        "Famille Annen",
+        "Lieu:",
+        "Nello",
+        "Personages:"
+      ],
+      "date": "2025-12-24T20:57:57.000Z"
+    },
+    {
+      "fichier": "4-IMG_7136-opt.jpg",
+      "titre": "4-IMG_7136",
+      "tags": [
+        "Anita",
+        "Annen",
+        "Canton Genève et environs",
+        "Drize",
+        "Famille Annen",
+        "Lieu:",
+        "Personages:"
+      ],
+      "date": "2025-12-25T09:25:14.000Z"
+    },
+    {
+      "fichier": "5-IMG_7165-opt.jpg",
+      "titre": "5-IMG_7165",
+      "tags": [
+        "Annen",
+        "Canton Genève et environs",
+        "Drize",
+        "Famille Annen",
+        "Isabelle",
+        "Lieu:",
+        "Lucas",
+        "Personages:"
+      ],
+      "date": "2025-12-25T09:29:55.000Z"
+    },
+    {
+      "fichier": "6-IMG_7180-opt.jpg",
+      "titre": "6-IMG_7180",
+      "tags": [
+        "Anita",
+        "Annen",
+        "Canton Genève et environs",
+        "Drize",
+        "Famille Annen",
+        "Lieu:",
+        "Personages:"
+      ],
+      "date": "2025-12-25T09:31:27.000Z"
+    },
+    {
+      "fichier": "7-IMG_7197-opt.jpg",
+      "titre": "7-IMG_7197",
+      "tags": [
+        "Annen",
+        "Canton Genève et environs",
+        "Clélia",
+        "Drize",
+        "Famille Annen",
+        "Gregoire",
+        "Grégoire",
+        "Lieu:",
+        "Personages:"
+      ],
+      "date": "2025-12-25T09:34:34.000Z"
+    },
+    {
+      "fichier": "8-IMG_7202-opt.jpg",
+      "titre": "8-IMG_7202",
+      "tags": [
+        "Annen",
+        "Canton Genève et environs",
+        "Drize",
+        "Famille Annen",
+        "Isabelle",
+        "Lieu:",
+        "Mattia",
+        "Personages:"
+      ],
+      "date": "2025-12-25T09:34:56.000Z"
+    },
+    {
+      "fichier": "9-IMG_7215-opt.jpg",
+      "titre": "9-IMG_7215",
+      "tags": [
+        "Annen",
+        "Canton Genève et environs",
+        "Drize",
+        "Famille Annen",
+        "Gregoire",
+        "Grégoire",
+        "Lieu:",
+        "Personages:"
+      ],
+      "date": "2025-12-25T09:37:27.000Z"
+    },
+    {
+      "fichier": "10-IMG_7242-opt.jpg",
+      "titre": "10-IMG_7242",
+      "tags": [
+        "Anita",
+        "Annen",
+        "Canton Genève et environs",
+        "Drize",
+        "Famille Annen",
+        "Lieu:",
+        "Personages:"
+      ],
+      "date": "2025-12-25T09:43:23.000Z"
+    },
+    {
+      "fichier": "11-IMG_7249-opt.jpg",
+      "titre": "11-IMG_7249",
+      "tags": [
+        "Annen",
+        "Canton Genève et environs",
+        "Drize",
+        "Famille Annen",
+        "Lieu:",
+        "Léo",
+        "Mattia",
+        "Personages:"
+      ],
+      "date": "2025-12-25T09:46:14.000Z"
+    },
+    {
+      "fichier": "12-IMG_7290-opt.jpg",
+      "titre": "12-IMG_7290",
+      "tags": [
+        "Annen",
+        "Canton Genève et environs",
+        "Drize",
+        "Famille Annen",
+        "Lieu:",
+        "Lucas",
+        "Personages:"
+      ],
+      "date": "2025-12-25T09:50:02.000Z"
+    },
+    {
+      "fichier": "13-IMG_7309-opt.jpg",
+      "titre": "13-IMG_7309",
+      "tags": [
+        "Anita",
+        "Annen",
+        "Canton Genève et environs",
+        "Clélia",
+        "Drize",
+        "Famille Annen",
+        "Gregoire",
+        "Grégoire",
+        "Isabelle",
+        "Lieu:",
+        "Personages:"
+      ],
+      "date": "2025-12-25T09:51:39.000Z"
+    },
+    {
+      "fichier": "14-IMG_7360-opt.jpg",
+      "titre": "14-IMG_7360",
+      "tags": [
+        "Annen",
+        "Canton Genève et environs",
+        "Drize",
+        "Famille Annen",
+        "Lieu:",
+        "Personages:"
+      ],
+      "date": "2025-12-25T09:57:47.000Z"
+    },
+    {
+      "fichier": "15-IMG_7376-opt.jpg",
+      "titre": "15-IMG_7376",
+      "tags": [
+        "Anita",
+        "Annen",
+        "Canton Genève et environs",
+        "Drize",
+        "Famille Annen",
+        "Lieu:",
+        "Personages:"
+      ],
+      "date": "2025-12-25T09:59:30.000Z"
+    },
+    {
+      "fichier": "16-IMG_7397-opt.jpg",
+      "titre": "16-IMG_7397",
+      "tags": [
+        "Annen",
+        "Canton Genève et environs",
+        "Drize",
+        "Famille Annen",
+        "Lieu:",
+        "Mattia",
+        "Personages:"
+      ],
+      "date": "2025-12-25T10:01:22.000Z"
+    },
+    {
+      "fichier": "17-IMG_7547-opt.jpg",
+      "titre": "17-IMG_7547",
+      "tags": [
+        "Annen",
+        "Canton Genève et environs",
+        "Clélia",
+        "Drize",
+        "Famille Annen",
+        "Lieu:",
+        "Personages:"
+      ],
+      "date": "2025-12-25T21:14:54.000Z"
+    },
+    {
+      "fichier": "18-IMG_7565-opt.jpg",
+      "titre": "18-IMG_7565",
+      "tags": [
+        "Anita",
+        "Annen",
+        "Canton Genève et environs",
+        "Drize",
+        "Famille Annen",
+        "Lieu:",
+        "Personages:"
+      ],
+      "date": "2025-12-25T21:35:04.000Z"
+    }
+  ]
+}

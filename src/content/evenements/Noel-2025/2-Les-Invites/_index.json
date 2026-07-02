@@ -1,0 +1,159 @@
+{
+  "titre": "2 Les Invités",
+  "type": "evenement",
+  "date": "2026-07-02",
+  "_aide_description": "Pour un saut de ligne, utilisez \\n entre les phrases",
+  "description": "",
+  "couverture": "1-IMG_6545-opt.jpg",
+  "_aide_categories": "Valeurs possibles : admin, famille-proche, famille-eloignee, jargeva, cabasson, public",
+  "categories": [
+    "admin"
+  ],
+  "videos": [
+    {
+      "_commentaire": "Supprimer cette ligne et remplir youtubeId avec l'ID de la vidéo YouTube",
+      "titre": "Titre de la vidéo",
+      "youtubeId": "",
+      "type": "normal"
+    }
+  ],
+  "sousEvenements": [],
+  "photos": [
+    {
+      "fichier": "1-IMG_6545-opt.jpg",
+      "titre": "1-IMG_6545",
+      "tags": [
+        "Annen",
+        "Canton Genève et environs",
+        "Copains",
+        "Drize",
+        "Famille Annen",
+        "Isabelle",
+        "Lieu:",
+        "Martine",
+        "Mattia",
+        "Melo",
+        "Personages:"
+      ],
+      "date": "2025-12-20T21:41:21.000Z"
+    },
+    {
+      "fichier": "2-IMG_6693-opt.jpg",
+      "titre": "2-IMG_6693",
+      "tags": [
+        "Agnès",
+        "Annen",
+        "Canton Genève et environs",
+        "Drize",
+        "Famille Annen",
+        "Lieu:",
+        "Mattia",
+        "Personages:",
+        "Visages"
+      ],
+      "date": "2025-12-22T15:32:27.000Z"
+    },
+    {
+      "fichier": "3-IMG_6731-opt.jpg",
+      "titre": "3-IMG_6731",
+      "tags": [
+        "Anita",
+        "Annen",
+        "Aron",
+        "Canton Genève et environs",
+        "Drize",
+        "Famille Annen",
+        "Lieu:",
+        "Personages:"
+      ],
+      "date": "2025-12-23T13:32:08.000Z"
+    },
+    {
+      "fichier": "4-IMG_6819-opt.jpg",
+      "titre": "4-IMG_6819",
+      "tags": [
+        "Anita",
+        "Annen",
+        "Canton Genève et environs",
+        "Cencin Famille",
+        "Drize",
+        "Famille Annen",
+        "Lieu:",
+        "Léo",
+        "Mattia",
+        "Nello",
+        "Personages:"
+      ],
+      "date": "2025-12-24T19:20:49.000Z"
+    },
+    {
+      "fichier": "5-IMG_6867-opt.jpg",
+      "titre": "5-IMG_6867",
+      "tags": [
+        "Alma",
+        "Anita",
+        "Annen",
+        "Canton Genève et environs",
+        "Cencin Famille",
+        "Clélia",
+        "Drize",
+        "Famille Annen",
+        "Isabelle",
+        "Lieu:",
+        "Léo",
+        "Personages:",
+        "Yves"
+      ],
+      "date": "2025-12-24T20:43:44.000Z"
+    },
+    {
+      "fichier": "6-IMG_7020-opt.jpg",
+      "titre": "6-IMG_7020",
+      "tags": [
+        "Alma",
+        "Anita",
+        "Annen",
+        "Canton Genève et environs",
+        "Cencin Famille",
+        "Clélia",
+        "Drize",
+        "Famille Annen",
+        "Isabelle",
+        "Lieu:",
+        "Lucas",
+        "Léo",
+        "Personages:",
+        "Yves"
+      ],
+      "date": "2025-12-24T21:57:00.000Z"
+    },
+    {
+      "fichier": "7-IMG_7471-opt.jpg",
+      "titre": "7-IMG_7471",
+      "tags": [
+        "Anaelle",
+        "Anita",
+        "Annen",
+        "Canton Genève et environs",
+        "Clélia",
+        "Cyprien",
+        "Drize",
+        "Elie",
+        "Enya",
+        "Famille Annen",
+        "Florence",
+        "Gauthey",
+        "Grégoire",
+        "Jean",
+        "Jean-Pierre",
+        "Lieu:",
+        "Léo",
+        "Personages:",
+        "ProjetParis",
+        "Projets:",
+        "Visages"
+      ],
+      "date": "2025-12-25T20:15:53.000Z"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "titre": "Noël 2025",
+  "type": "evenement",
+  "date": "2026-07-02",
+  "_aide_description": "Pour un saut de ligne, utilisez \\n entre les phrases",
+  "description": "",
+  "couverture": "1-Arrivee-du-Pere-Noel/1-IMG_7067-opt.jpg",
+  "_aide_categories": "Valeurs possibles : admin, famille-proche, famille-eloignee, jargeva, cabasson, public",
+  "categories": [
+    "admin"
+  ],
+  "videos": [
+    {
+      "_commentaire": "Supprimer cette ligne et remplir youtubeId avec l'ID de la vidéo YouTube",
+      "titre": "Titre de la vidéo",
+      "youtubeId": "",
+      "type": "normal"
+    }
+  ],
+  "sousEvenements": [
+    "1-Arrivee-du-Pere-Noel",
+    "2-Les-Invites",
+    "3-Les-jeux",
+    "4-Mattia-et-Anita",
+    "5-Patisserie",
+    "6-Les-Cadeaux",
+    "7-Calins"
+  ],
+  "photos": []
+}

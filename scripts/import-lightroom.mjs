@@ -74,7 +74,7 @@ async function traiterDossier(dossierPath, contentPath, niveau = 0) {
   const existingContentMeta = await lireJson(path.join(contentPath, '_index.json'));
 
   if (sourceMeta === null) {
-    const titreDeduit = nomDossier.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+    const titreDeduit = nomDossier.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
     const today = new Date().toISOString().split('T')[0];
     sourceMeta = {
       titre: titreDeduit,
@@ -162,7 +162,7 @@ async function traiterDossier(dossierPath, contentPath, niveau = 0) {
   }
 
   const data = {
-    titre: sourceMeta?.titre || nomDossier.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase()),
+    titre: sourceMeta?.titre || nomDossier.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' '),
     type,
     date: sourceMeta?.date || premierDate.split('T')[0],
     "_aide_description": "Pour un saut de ligne, utilisez \\n entre les phrases",

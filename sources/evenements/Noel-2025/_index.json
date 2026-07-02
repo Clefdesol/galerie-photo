@@ -1,0 +1,22 @@
+{
+  "titre": "Noël 2025",
+  "type": "evenement",
+  "date": "2026-07-02",
+  "_aide_description": "Pour un saut de ligne, utilisez \\n entre les phrases",
+  "description": "",
+  "couverture": "",
+  "_aide_categories": "Valeurs possibles : admin, famille-proche, famille-eloignee, jargeva, cabasson, public",
+  "categories": [
+    "admin"
+  ],
+  "videos": [
+    {
+      "_commentaire": "Supprimer cette ligne et remplir youtubeId avec l'ID de la vidéo YouTube",
+      "titre": "Titre de la vidéo",
+      "youtubeId": "",
+      "type": "normal"
+    }
+  ],
+  "sousEvenements": [],
+  "photos": []
+}
